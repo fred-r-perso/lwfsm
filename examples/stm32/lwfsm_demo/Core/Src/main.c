@@ -95,9 +95,16 @@ int main(void)
   printf("***** LWFSM demo project *****\r\n");
   HAL_GPIO_WritePin(GPIOH, LED_RED_Pin|STATUS_LED_Pin, GPIO_PIN_SET);
 
-  /* Run the FSM task */
-  myAppTask(&my_user_ctxt);
+  /* Run the FSM task : programming model 1 */
+  printf("Start with programming model 1\r\n");
+  myAppTaskM1(&my_user_ctxt);
 
+  /* Run the FSM task : programming model 2 */
+  printf("Switch to programming model 2\r\n");
+  gButtonCnt = 0;
+  my_user_ctxt = 0;
+  myAppTaskM2(&my_user_ctxt);
+  printf("***** LWFSM demo project completed.*****\r\n");
   /* USER CODE END 2 */
 
   /* Infinite loop */

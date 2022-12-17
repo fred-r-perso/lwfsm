@@ -71,6 +71,15 @@ extern "C" {
 #endif /* LWFSM_USE_CONTEXT */
 
 /**
+ * \brief           Enables `1` or disables `0` the Programming Model 2
+ *
+ * It enables the possibility to have a single declaration of the FSM states
+ */
+#ifndef LWFSM_USE_PROGMOD2
+#define LWFSM_USE_PROGMOD2 1
+#endif /* LWFSM_USE_PROGMOD2 */
+
+/**
  * \}
  */
 

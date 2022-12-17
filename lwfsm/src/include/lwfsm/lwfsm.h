@@ -96,6 +96,19 @@ typedef struct {
 } lwfsm_ctxt_t;
 
 /**
+ * \brief           Structure of the internal context of an FSM
+ *                  Programming Model 2
+ */
+typedef struct {
+  const lwfsm_table_row_t *fsm_table; /*<! FSM table to be run */
+  uint32_t cur_state;                  /*<! current FSM state */
+#if LWFSM_USE_LOG == 1
+  const char * *log_names;             /*<! array of log names for the FSM states */
+#endif /* LWFSM_USE_LOG */
+  uint32_t nb_states;                  /*<! number of FSM states */
+} lwfsm_ctxt2_t;
+
+/**
  * \}
  */
 
@@ -127,12 +140,26 @@ typedef struct {
 #define LWFSM_STATES_START(states_list) typedef enum {
 
 /**
- * \brief           Declares a new FSM state
+ * \brief           Declares a new FSM state - Model #1
  *
  * It adds a new state in the list of states.
  * /!\ The initial state must be the first one in this list. /!\
+ *
+ * See: lwfsm_app_model1_template.c
  */
 #define LWFSM_STATES_DECL(fsm_state) fsm_state,
+
+/**
+ * \brief           Declares a new FSM state - Model #2
+ *
+ * It adds a new state in the FSM.
+ * This macro must be redefined in the code depending on what is being defined:
+ * list of states, list of state names, fsm table.
+ *
+ * See: lwfsm_app_model2_template.c
+ *
+ */
+#define LWFSM_STATES_FULL_DECL(fsm_state, fsm_state_name, fsm_state_function) redefine_me_in_the_code
 
 /**
  * \brief           Ends a new list of FSM states description
@@ -150,7 +177,7 @@ typedef struct {
 #define LWFSM_TABLE_START(table_name) const lwfsm_table_row_t table_name[] = {
 
 /**
- * \brief           Declares a new FSM state function
+ * \brief           Declares a new FSM state function - Model #1
  *
  * It declares a FSM state function in the FSM table.
  * /!\ The state functions must be added in the same order as the states declaration. /!\
@@ -173,7 +200,7 @@ typedef struct {
 #define LWFSM_LOGS_NAME_START(states_log_names) const char * states_log_names[] = {
 
 /**
- * \brief           Declares a new FSM state log name
+ * \brief           Declares a new FSM state log name - Model #1
  *
  * It adds a new state in the list of states log names.
  * /!\ The state log name must be added in the same order as the states declaration. /!\
@@ -198,6 +225,12 @@ typedef struct {
  * \{
  */
 
+/**
+ * \defgroup        LWFSM FSM engine Model 1
+ * \brief           Functions to initialize and run a state machine
+ * \{
+ */
+
 #if LWFSM_USE_LOG == 1
 lwfsm_status_t lwfsm_init_state_machine(lwfsm_ctxt_t *fsm_ctxt, const lwfsm_table_row_t *fsm_table, const char * *states_log_names, const uint32_t initial_state);
 #else
@@ -209,6 +242,39 @@ lwfsm_status_t lwfsm_run_state_machine(lwfsm_ctxt_t * fsm_ctxt, void * user_ctxt
 #else
 lwfsm_status_t lwfsm_run_state_machine(lwfsm_ctxt_t * fsm_ctxt);
 #endif /* LWFSM_USE_CONTEXT */
+
+/**
+ * \}
+ */
+
+/**
+ * Programming Model 2
+ */
+#if LWFSM_USE_PROGMOD2 == 1
+
+/**
+ * \defgroup        LWFSM FSM engine Model 2
+ * \brief           Functions to initialize and run a state machine
+ * \{
+ */
+
+#if LWFSM_USE_LOG == 1
+lwfsm_status_t lwfsm_init_state_machineM2(lwfsm_ctxt2_t *fsm_ctxt, const lwfsm_table_row_t *fsm_table, const char * *states_log_names, const uint32_t initial_state, const uint32_t nb_states);
+#else
+lwfsm_status_t lwfsm_init_state_machineM2(lwfsm_ctxt2_t * fsm_ctxt, const lwfsm_table_row_t *fsm_table, const uint32_t initial_state, const uint32_t nb_states);
+#endif /* LWFSM_USE_LOG */
+
+#if LWFSM_USE_CONTEXT == 1
+lwfsm_status_t lwfsm_run_state_machineM2(lwfsm_ctxt2_t * fsm_ctxt, void * user_ctxt);
+#else
+lwfsm_status_t lwfsm_run_state_machineM2(lwfsm_ctxt2_t * fsm_ctxt);
+#endif /* LWFSM_USE_CONTEXT */
+
+#endif /* LWFSM_USE_PROGMOD2 */
+
+/**
+ * \}
+ */
 
 /**
  * \}

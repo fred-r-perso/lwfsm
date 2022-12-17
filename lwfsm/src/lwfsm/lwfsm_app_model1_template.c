@@ -1,5 +1,5 @@
 /**
- * \file            lwfsm_app_template.c
+ * \file            lwfsm_app_model1_template.c
  * \brief           LwFSM application file
  */
 
@@ -33,7 +33,6 @@
  */
 #define LWFSM_APP_C
 /* Add your own includes here */
-#include "main.h"
 #include "lwfsm.h"
 
 /* declare your FSM state C function prototypes here */
@@ -65,8 +64,9 @@ LWFSM_TABLE_ENTRY(prv_intermediate_state)
 LWFSM_TABLE_ENTRY(prv_final_state)
 LWFSM_TABLE_END(my_state_machine)
 
+
 /* FSM task entry point */
-void myAppTaskM1(void * p_ctxt)
+void myAppTask(void * p_ctxt)
 {
   lwfsm_status_t ret = lwfsm_init_state_machine(&my_lwfsm_ctxt, my_state_machine, my_states_names, INIT_STATE);
 
@@ -85,54 +85,18 @@ void myAppTaskM1(void * p_ctxt)
 /* Implement your FSM states here */
 static uint32_t prv_initial_state(void * opaque_ctxt)
 {
-  while (gButtonCnt < 3)
-  {
-  	if (gButtonCnt > *(uint32_t *)opaque_ctxt)
-  	{
-  		printf("gButtonCnt=%lu\r\n", gButtonCnt);
-  		*(uint32_t *)opaque_ctxt = gButtonCnt;
-  	}
-    /** Enter sleep mode.
-     *  The CPU can be woken up by the EXTI interrupt or the SystTick interrupt.
-     */
-    HAL_PWR_EnterSLEEPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
-  }
-
+  /* your code goes here */
   return INTER_STATE;
 }
 
 static uint32_t prv_intermediate_state(void * opaque_ctxt)
 {
-	while (gButtonCnt < 6)
-	{
-  	if (gButtonCnt > *(uint32_t *)opaque_ctxt)
-  	{
-  		printf("gButtonCnt=%lu\r\n", gButtonCnt);
-  		*(uint32_t *)opaque_ctxt = gButtonCnt;
-  	}
-		/** Enter sleep mode.
-		 *  The CPU can be woken up by the EXTI interrupt or the SystTick interrupt.
-		 */
-		HAL_PWR_EnterSLEEPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
-	}
-
-	return FINAL_STATE;
+  /* your code goes here */
+  return FINAL_STATE;
 }
 
 static uint32_t prv_final_state(void * opaque_ctxt)
 {
-	while (gButtonCnt < 11)
-	{
-  	if (gButtonCnt > *(uint32_t *)opaque_ctxt)
-  	{
-  		printf("gButtonCnt=%lu\r\n", gButtonCnt);
-  		*(uint32_t *)opaque_ctxt = gButtonCnt;
-  	}
-		/** Enter sleep mode.
-		 *  The CPU can be woken up by the EXTI interrupt or the SystTick interrupt.
-		 */
-		HAL_PWR_EnterSLEEPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
-	}
-
+  /* your code goes here */
   return LWFSM_STOP_SUCCESS;
 }

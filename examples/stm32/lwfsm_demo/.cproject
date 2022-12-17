@@ -54,7 +54,7 @@
 									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Device/ST/STM32U5xx/Include"/>
 									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Include"/>
 								</option>
-								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.otherflags.127002351" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.otherflags" useByScannerDiscovery="true" valueType="stringList">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.otherflags.127002351" name="Other flags" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.otherflags" useByScannerDiscovery="true" valueType="stringList">
 									<listOptionValue builtIn="false" value="-save-temps"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.185500044" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
@@ -159,16 +159,22 @@
 					</folderInfo>
 					<fileInfo id="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.692512774.563926311" name="lwfsm_opts_template.h" rcbsApplicability="disable" resourcePath="lwfsm/src/include/lwfsm/lwfsm_opts_template.h" toolsToInvoke=""/>
 					<fileInfo id="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.692512774.556950730" name="lwfsm_app_template.h" rcbsApplicability="disable" resourcePath="lwfsm/src/lwfsm/lwfsm_app_template.h" toolsToInvoke=""/>
-					<fileInfo id="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.692512774.1129726970" name="lwfsm_app_template.c" rcbsApplicability="disable" resourcePath="lwfsm/src/lwfsm/lwfsm_app_template.c" toolsToInvoke="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.609777059.94739375">
-						<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.609777059.94739375" name="MCU GCC Compiler" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.609777059">
-							<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.1411933259" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
+					<fileInfo id="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.692512774.2130883479" name="lwfsm_states_template.fsm" rcbsApplicability="disable" resourcePath="lwfsm/src/lwfsm/lwfsm_states_template.fsm" toolsToInvoke=""/>
+					<fileInfo id="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.692512774.1939874288" name="lwfsm_app_model2_template.c" rcbsApplicability="disable" resourcePath="lwfsm/src/lwfsm/lwfsm_app_model2_template.c" toolsToInvoke="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.609777059.874127519">
+						<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.609777059.874127519" name="MCU GCC Compiler" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.609777059">
+							<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.2080087641" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
+						</tool>
+					</fileInfo>
+					<fileInfo id="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.692512774.395558088" name="lwfsm_app_model1_template.c" rcbsApplicability="disable" resourcePath="lwfsm/src/lwfsm/lwfsm_app_model1_template.c" toolsToInvoke="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.609777059.604201814">
+						<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.609777059.604201814" name="MCU GCC Compiler" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.609777059">
+							<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.216286897" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 						</tool>
 					</fileInfo>
 					<sourceEntries>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="App"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
-						<entry excluding="src/include/lwfsm/lwfsm_opts_template.h|src/lwfsm/lwfsm_app_template.h|src/lwfsm/lwfsm_app_template.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="lwfsm"/>
+						<entry excluding="src/lwfsm/lwfsm_states_template.fsm|src/lwfsm/lwfsm_app_model1_template.c|src/lwfsm/lwfsm_app_model2_template.c|src/include/lwfsm/lwfsm_opts_template.h|src/lwfsm/lwfsm_app_template.h|src/lwfsm/lwfsm_app_template.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="lwfsm"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

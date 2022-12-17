@@ -1,6 +1,6 @@
 /**
- * \file            lwfsm_opts_template.h
- * \brief           LwEVT configuration file
+ * \file            lwfsm_states_template.fsm
+ * \brief           LwFSM application file
  */
 
 /*
@@ -31,17 +31,8 @@
  * Author:          Frederic RUELLE <frederic.ruelle@free.fr>
  * Version:         v0.1.0
  */
-#ifndef LWFSM_HDR_OPTS_H
-#define LWFSM_HDR_OPTS_H
 
-/* Rename this file to "lwfsm_opts.h" for your application */
-
-/*
- * Open "include/lwfsm/lwfsm_opt.h" and
- * copy & replace here the settings you want to change
- */
-#define LWFSM_USE_LOG 1
-#define LWFSM_USE_CONTEXT 1
-#define LWFSM_USE_PROGMOD2 1
-
-#endif /* LWFSM_HDR_OPTS_H */
+/* Declare here the states you want to use in the FSM */
+LWFSM_STATES_FULL_DECL(INIT_STATE, "Initial State", prv_initial_state)
+LWFSM_STATES_FULL_DECL(INTER_STATE, "Intermediate State", prv_intermediate_state)
+LWFSM_STATES_FULL_DECL(FINAL_STATE, "Final State", prv_final_state)

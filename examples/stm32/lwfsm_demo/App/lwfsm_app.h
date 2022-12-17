@@ -34,8 +34,10 @@
 #ifndef LWFSM_HDR_APP_H
 #define LWFSM_HDR_APP_H
 
-/* Rename this file to "lwfsm_app.h" for your application */
-void myAppTask(void * p_ctxt);
+/* Model 1 */
+void myAppTaskM1(void * p_ctxt);
+/* Model 2 */
+void myAppTaskM2(void * p_ctxt);
 
 #endif /* LWFSM_HDR_APP_H */
 

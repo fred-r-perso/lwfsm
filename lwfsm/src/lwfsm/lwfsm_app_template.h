@@ -34,7 +34,9 @@
 #ifndef LWFSM_HDR_APP_H
 #define LWFSM_HDR_APP_H
 
-/* Rename this file to "lwfsm_app.h" for your application */
+/** Rename this file to "lwfsm_app.h" for your application .
+ *  Add your own entry point to the FSM.
+ */
 void myAppTask(void * p_ctxt);
 
 #endif /* LWFSM_HDR_APP_H */
