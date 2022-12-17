@@ -96,7 +96,7 @@ lwfsm_status_t lwfsm_run_state_machine(lwfsm_ctxt_t * fsm_ctxt)
     state_func = fsm_ctxt->fsm_table[fsm_ctxt->cur_state].state_function;
 #if LWFSM_USE_LOG == 1
     cur_state_name = fsm_ctxt->log_names[fsm_ctxt->cur_state];
-    LWFSM_LOG("[INGO] LWFSM - entering state: %s\r\n", cur_state_name);
+    LWFSM_LOG("[INFO] LWFSM - entering state: %s\r\n", cur_state_name);
 #endif /* LWFSM_USE_LOG */
     /* Run the state function */
 #if LWFSM_USE_CONTEXT == 1
