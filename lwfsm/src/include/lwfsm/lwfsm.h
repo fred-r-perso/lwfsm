@@ -35,8 +35,8 @@
 #define LWFSM_HDR_API_H
 
 #include <stdint.h>     /* lwfsm uses stddint types */
-#include "lwfsm_opt.h"   /* lwfsm configuration      */
-#include "lwfsm_log.h"   /* lwfsm log porting        */
+#include "lwfsm_opt.h"  /* lwfsm configuration      */
+#include "lwfsm_log.h"  /* lwfsm log porting        */
 
 #ifdef __cplusplus
 extern "C" {
@@ -58,9 +58,9 @@ extern "C" {
  */
 #if LWFSM_USE_CONTEXT == 1
 /* opaque context */
-typedef uint32_t (*lwfsl_state_func_t)(void * opaque_ctxt);
+typedef uint32_t (*lwfsm_state_func_t)(void * opaque_ctxt);
 #else
-typedef uint32_t (*lwfsl_state_func_t)(void);
+typedef uint32_t (*lwfsm_state_func_t)(void);
 #endif /* LWFSM_USE_CONTEXT */
 
 /**
@@ -69,7 +69,7 @@ typedef uint32_t (*lwfsl_state_func_t)(void);
  * Structure describing one row in the FSM table
  */
 typedef struct {
-  lwfsl_state_func_t state_function; /*<! C function implementing the logic of an FSM state */
+  lwfsm_state_func_t state_function; /*!< C function implementing the logic of an FSM state */
 } lwfsm_table_row_t;
 
 
@@ -78,8 +78,8 @@ typedef struct {
  *
  */
 typedef enum {
-  LWFSM_OK = 0,    /*<! The FSM state machine call succeeded */
-  LWFSM_ERROR      /*<! The FSM state machine call encountered an error */
+  LWFSM_OK = 0,    /*!< The FSM state machine call succeeded */
+  LWFSM_ERROR      /*!< The FSM state machine call encountered an error */
 } lwfsm_status_t;
 
 
@@ -88,10 +88,10 @@ typedef enum {
  *
  */
 typedef struct {
-  const lwfsm_table_row_t *fsm_table; /*<! FSM table to be run */
-  uint32_t cur_state;                  /*<! current FSM state */
+  const lwfsm_table_row_t *fsm_table; /*!< FSM table to be run */
+  uint32_t cur_state;                  /*!< current FSM state */
 #if LWFSM_USE_LOG == 1
-  const char * *log_names;             /*<! array of log names for the FSM states */
+  const char * *log_names;             /*!< array of log names for the FSM states */
 #endif /* LWFSM_USE_LOG */
 } lwfsm_ctxt_t;
 
@@ -100,12 +100,12 @@ typedef struct {
  *                  Programming Model 2
  */
 typedef struct {
-  const lwfsm_table_row_t *fsm_table; /*<! FSM table to be run */
-  uint32_t cur_state;                  /*<! current FSM state */
+  const lwfsm_table_row_t *fsm_table; /*!< FSM table to be run */
+  uint32_t cur_state;                  /*!< current FSM state */
 #if LWFSM_USE_LOG == 1
-  const char * *log_names;             /*<! array of log names for the FSM states */
+  const char * *log_names;             /*!< array of log names for the FSM states */
 #endif /* LWFSM_USE_LOG */
-  uint32_t nb_states;                  /*<! number of FSM states */
+  uint32_t nb_states;                  /*!< number of FSM states */
 } lwfsm_ctxt2_t;
 
 /**

@@ -37,11 +37,11 @@
 
 /**
  * \brief           FSM engine initialization
- * \param           fsm_ctxt: definition of the FSM to run, allocated by the caller (see @lwfsm_ctxt_t)
+ * \param           fsm_ctxt: definition of the FSM to run, allocated by the caller (see @ref lwfsm_ctxt_t)
  * \param           fsm_table: the table of C functions implementing the FSM states logic
  * \param           states_log_names: FSM states names to be printed in the logs if LWFSM_USE_LOG is enabled
  * \param           initial_state: initial state of this FSM
- * \return          see @lwfsm_status_t
+ * \return          see @ref lwfsm_status_t
  */
 #if LWFSM_USE_LOG == 1
 lwfsm_status_t lwfsm_init_state_machine(lwfsm_ctxt_t * fsm_ctxt, const lwfsm_table_row_t * const fsm_table, const char ** states_log_names, const uint32_t initial_state)
@@ -73,9 +73,9 @@ lwfsm_status_t lwfsm_init_state_machine(lwfsm_ctxt_t * fsm_ctxt, const lwfsm_tab
 
 /**
  * \brief           FSM engine loop
- * \param           fsm_ctxt: definition of the FSM to run (see @lwfsm_ctxt_t)
+ * \param           fsm_ctxt: definition of the FSM to run (see @ref lwfsm_ctxt_t)
  * \param           user_ctxt: an opaque user context to be used in the FSM state functions
- * \return          see @lwfsm_status_t
+ * \return          see @ref lwfsm_status_t
  */
 #if LWFSM_USE_CONTEXT == 1
 lwfsm_status_t lwfsm_run_state_machine(lwfsm_ctxt_t * fsm_ctxt, void * user_ctxt)
@@ -83,7 +83,7 @@ lwfsm_status_t lwfsm_run_state_machine(lwfsm_ctxt_t * fsm_ctxt, void * user_ctxt
 lwfsm_status_t lwfsm_run_state_machine(lwfsm_ctxt_t * fsm_ctxt)
 #endif /* LWFSM_USE_CONTEXT */
 {
-  lwfsl_state_func_t state_func; /* next FSM state function to be called */
+  lwfsm_state_func_t state_func; /* next FSM state function to be called */
 #if LWFSM_USE_LOG == 1
   const char * cur_state_name; /* name to be logged for the current state */
 #endif /* LWFSM_USE_LOG */
@@ -128,12 +128,12 @@ lwfsm_status_t lwfsm_run_state_machine(lwfsm_ctxt_t * fsm_ctxt)
 
 /**
  * \brief           FSM engine initialization
- * \param           fsm_ctxt: definition of the FSM to run, allocated by the caller (see @lwfsm_ctxt_t)
+ * \param           fsm_ctxt: definition of the FSM to run, allocated by the caller (see @ref lwfsm_ctxt_t)
  * \param           fsm_table: the table of C functions implementing the FSM states logic
  * \param           states_log_names: FSM states names to be printed in the logs if LWFSM_USE_LOG is enabled
  * \param           initial_state: initial state of this FSM
  * \param           nb_states: number of FSM states in the state machine
- * \return          see @lwfsm_status_t
+ * \return          see @ref lwfsm_status_t
  */
 #if LWFSM_USE_LOG == 1
 lwfsm_status_t lwfsm_init_state_machineM2(lwfsm_ctxt2_t *fsm_ctxt, const lwfsm_table_row_t *fsm_table, const char * *states_log_names, const uint32_t initial_state, const uint32_t nb_states)
@@ -166,9 +166,9 @@ lwfsm_status_t lwfsm_init_state_machineM2(lwfsm_ctxt2_t * fsm_ctxt, const lwfsm_
 
 /**
  * \brief           FSM engine loop
- * \param           fsm_ctxt: definition of the FSM to run (see @lwfsm_ctxt_t)
+ * \param           fsm_ctxt: definition of the FSM to run (see @ref lwfsm_ctxt_t)
  * \param           user_ctxt: an opaque user context to be used in the FSM state functions
- * \return          see @lwfsm_status_t
+ * \return          see @ref lwfsm_status_t
  */
 #if LWFSM_USE_CONTEXT == 1
 lwfsm_status_t lwfsm_run_state_machineM2(lwfsm_ctxt2_t * fsm_ctxt, void * user_ctxt)
@@ -176,7 +176,7 @@ lwfsm_status_t lwfsm_run_state_machineM2(lwfsm_ctxt2_t * fsm_ctxt, void * user_c
 lwfsm_status_t lwfsm_run_state_machineM2(lwfsm_ctxt2_t * fsm_ctxt)
 #endif /* LWFSM_USE_CONTEXT */
 {
-  lwfsl_state_func_t state_func; /* next FSM state function to be called */
+  lwfsm_state_func_t state_func; /* next FSM state function to be called */
 #if LWFSM_USE_LOG == 1
   const char * cur_state_name; /* name to be logged for the current state */
 #endif /* LWFSM_USE_LOG */
