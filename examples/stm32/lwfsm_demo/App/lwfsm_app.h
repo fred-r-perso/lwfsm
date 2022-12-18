@@ -1,6 +1,6 @@
 /**
- * \file            lwfsm_app_template.h
- * \brief           LwFSM application file
+ * @file            lwfsm_app_template.h
+ * @brief           LwFSM application file
  */
 
 /*

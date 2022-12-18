@@ -1,6 +1,6 @@
 /**
- * \file            lwfsm_states_template.fsm
- * \brief           LwFSM application file
+ * @file            lwfsm_states_template.fsm
+ * @brief           LwFSM application file
  */
 
 /*

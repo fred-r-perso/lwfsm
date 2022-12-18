@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LwFSM: C:/lwfsm/lwfsm/src/include/lwfsm/lwfsm.h File Reference</title>
+<title>LwFSM: LwFSM FSM Declaration macros</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('lwfsm_8h.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('group___lw_f_s_m___macros.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -91,35 +91,14 @@ $(document).ready(function(){initNavTree('lwfsm_8h.html',''); initResizable(); }
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Data Structures</a> &#124;
-<a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">lwfsm.h File Reference</div></div>
+<a href="#define-members">Macros</a>  </div>
+  <div class="headertitle"><div class="title">LwFSM FSM Declaration macros</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>LwFSM API.  
+<p>Macros used to describe the Finite State Machine.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="lwfsm__opt_8h_source.html">lwfsm_opt.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="lwfsm__log_8h_source.html">lwfsm_log.h</a>&quot;</code><br />
-</div>
-<p><a href="lwfsm_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlwfsm__table__row__t.html">lwfsm_table_row_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FSM table row.  <a href="structlwfsm__table__row__t.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlwfsm__ctxt__t.html">lwfsm_ctxt_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure of the internal context of an FSM.  <a href="structlwfsm__ctxt__t.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlwfsm__ctxt2__t.html">lwfsm_ctxt2_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure of the internal context of an FSM Programming Model 2.  <a href="structlwfsm__ctxt2__t.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ga715a6eaac42f18c17cdb876aa6ba603b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___lw_f_s_m___macros.html#ga715a6eaac42f18c17cdb876aa6ba603b">LWFSM_STOP_SUCCESS</a>&#160;&#160;&#160;0xFFFFFFFEUL</td></tr>
@@ -158,44 +137,277 @@ Macros</h2></td></tr>
 <tr class="memitem:ga14f596f7e0685f15a93bc45c99655bf5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___lw_f_s_m___macros.html#ga14f596f7e0685f15a93bc45c99655bf5">LWFSM_LOGS_NAME_END</a>(states_log_names)&#160;&#160;&#160;};</td></tr>
 <tr class="memdesc:ga14f596f7e0685f15a93bc45c99655bf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends a new list of FSM states log names description.  <a href="group___lw_f_s_m___macros.html#ga14f596f7e0685f15a93bc45c99655bf5">More...</a><br /></td></tr>
 <tr class="separator:ga14f596f7e0685f15a93bc45c99655bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:ga1f824da4c340448f2fab98a2a3d7111a"><td class="memItemLeft" align="right" valign="top">typedef uint32_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___lw_f_s_m___types.html#ga1f824da4c340448f2fab98a2a3d7111a">lwfsm_state_func_t</a>) (void *opaque_ctxt)</td></tr>
-<tr class="memdesc:ga1f824da4c340448f2fab98a2a3d7111a"><td class="mdescLeft">&#160;</td><td class="mdescRight">C function implementing a FSM state.  <a href="group___lw_f_s_m___types.html#ga1f824da4c340448f2fab98a2a3d7111a">More...</a><br /></td></tr>
-<tr class="separator:ga1f824da4c340448f2fab98a2a3d7111a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:gac5dfb37d24f02ace29c00c45af5553ec"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___lw_f_s_m___types.html#gac5dfb37d24f02ace29c00c45af5553ec">lwfsm_status_t</a> { <a class="el" href="group___lw_f_s_m___types.html#ggac5dfb37d24f02ace29c00c45af5553ecaad55026fd5428c45adb2b3072118c616">LWFSM_OK</a> = 0
-, <a class="el" href="group___lw_f_s_m___types.html#ggac5dfb37d24f02ace29c00c45af5553ecabdafd9ba79b33c3afdd8a644efebe8a6">LWFSM_ERROR</a>
- }</td></tr>
-<tr class="memdesc:gac5dfb37d24f02ace29c00c45af5553ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return value of the FSM run function.  <a href="group___lw_f_s_m___types.html#gac5dfb37d24f02ace29c00c45af5553ec">More...</a><br /></td></tr>
-<tr class="separator:gac5dfb37d24f02ace29c00c45af5553ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ga5d031ea56c1b3524b1ff6978f636fb5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___lw_f_s_m___types.html#gac5dfb37d24f02ace29c00c45af5553ec">lwfsm_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___lw_f_s_m___a_p_i___m1.html#ga5d031ea56c1b3524b1ff6978f636fb5b">lwfsm_init_state_machine</a> (<a class="el" href="structlwfsm__ctxt__t.html">lwfsm_ctxt_t</a> *fsm_ctxt, const <a class="el" href="structlwfsm__table__row__t.html">lwfsm_table_row_t</a> *fsm_table, const char **states_log_names, const uint32_t initial_state)</td></tr>
-<tr class="memdesc:ga5d031ea56c1b3524b1ff6978f636fb5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">FSM engine initialization.  <a href="group___lw_f_s_m___a_p_i___m1.html#ga5d031ea56c1b3524b1ff6978f636fb5b">More...</a><br /></td></tr>
-<tr class="separator:ga5d031ea56c1b3524b1ff6978f636fb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad54a06d0aa371d4a631a1fe056f8bd0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___lw_f_s_m___types.html#gac5dfb37d24f02ace29c00c45af5553ec">lwfsm_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___lw_f_s_m___a_p_i___m1.html#gad54a06d0aa371d4a631a1fe056f8bd0e">lwfsm_run_state_machine</a> (<a class="el" href="structlwfsm__ctxt__t.html">lwfsm_ctxt_t</a> *fsm_ctxt, void *user_ctxt)</td></tr>
-<tr class="memdesc:gad54a06d0aa371d4a631a1fe056f8bd0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">FSM engine loop.  <a href="group___lw_f_s_m___a_p_i___m1.html#gad54a06d0aa371d4a631a1fe056f8bd0e">More...</a><br /></td></tr>
-<tr class="separator:gad54a06d0aa371d4a631a1fe056f8bd0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa16284f1422ff96d7bc550deb7ef97ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___lw_f_s_m___types.html#gac5dfb37d24f02ace29c00c45af5553ec">lwfsm_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___lw_f_s_m___a_p_i___m2.html#gaa16284f1422ff96d7bc550deb7ef97ce">lwfsm_init_state_machineM2</a> (<a class="el" href="structlwfsm__ctxt2__t.html">lwfsm_ctxt2_t</a> *fsm_ctxt, const <a class="el" href="structlwfsm__table__row__t.html">lwfsm_table_row_t</a> *fsm_table, const char **states_log_names, const uint32_t initial_state, const uint32_t nb_states)</td></tr>
-<tr class="memdesc:gaa16284f1422ff96d7bc550deb7ef97ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">FSM engine initialization.  <a href="group___lw_f_s_m___a_p_i___m2.html#gaa16284f1422ff96d7bc550deb7ef97ce">More...</a><br /></td></tr>
-<tr class="separator:gaa16284f1422ff96d7bc550deb7ef97ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga711182eae8128494523ed4865433e2d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___lw_f_s_m___types.html#gac5dfb37d24f02ace29c00c45af5553ec">lwfsm_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___lw_f_s_m___a_p_i___m2.html#ga711182eae8128494523ed4865433e2d9">lwfsm_run_state_machineM2</a> (<a class="el" href="structlwfsm__ctxt2__t.html">lwfsm_ctxt2_t</a> *fsm_ctxt, void *user_ctxt)</td></tr>
-<tr class="memdesc:ga711182eae8128494523ed4865433e2d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">FSM engine loop.  <a href="group___lw_f_s_m___a_p_i___m2.html#ga711182eae8128494523ed4865433e2d9">More...</a><br /></td></tr>
-<tr class="separator:ga711182eae8128494523ed4865433e2d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >LwFSM API. </p>
-</div></div><!-- contents -->
+<p >Macros used to describe the Finite State Machine. </p>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="gacf7268f80d00bd916e65322d97c90b7b" name="gacf7268f80d00bd916e65322d97c90b7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacf7268f80d00bd916e65322d97c90b7b">&#9670;&#160;</a></span>LWFSM_LOG_NAME_DECL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LWFSM_LOG_NAME_DECL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fsm_state_name</td><td>)</td>
+          <td>&#160;&#160;&#160;fsm_state_name,</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Declares a new FSM state log name - Model #1. </p>
+<p >It adds a new state in the list of states log names. /!\ The state log name must be added in the same order as the states declaration. /!\ </p>
+
+</div>
+</div>
+<a id="ga14f596f7e0685f15a93bc45c99655bf5" name="ga14f596f7e0685f15a93bc45c99655bf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga14f596f7e0685f15a93bc45c99655bf5">&#9670;&#160;</a></span>LWFSM_LOGS_NAME_END</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LWFSM_LOGS_NAME_END</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">states_log_names</td><td>)</td>
+          <td>&#160;&#160;&#160;};</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ends a new list of FSM states log names description. </p>
+<p >It closes the description of log strings to be used for the FSM states. </p>
+
+</div>
+</div>
+<a id="ga5fdaff8a2635b38f9115e138087e1d28" name="ga5fdaff8a2635b38f9115e138087e1d28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5fdaff8a2635b38f9115e138087e1d28">&#9670;&#160;</a></span>LWFSM_LOGS_NAME_START</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LWFSM_LOGS_NAME_START</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">states_log_names</td><td>)</td>
+          <td>&#160;&#160;&#160;const char * states_log_names[] = {</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Starts a new list of FSM states log names description. </p>
+<p >It starts the description of the list of log strings to be used for the FSM states. </p>
+
+</div>
+</div>
+<a id="ga7ca4246c6f9ad044558e01e86bf50780" name="ga7ca4246c6f9ad044558e01e86bf50780"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7ca4246c6f9ad044558e01e86bf50780">&#9670;&#160;</a></span>LWFSM_STATES_DECL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LWFSM_STATES_DECL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fsm_state</td><td>)</td>
+          <td>&#160;&#160;&#160;fsm_state,</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Declares a new FSM state - Model #1. </p>
+<p >It adds a new state in the list of states. /!\ The initial state must be the first one in this list. /!\</p>
+<p >See: <a class="el" href="lwfsm__app__model1__template_8c.html" title="LwFSM application file.">lwfsm_app_model1_template.c</a> </p>
+
+</div>
+</div>
+<a id="ga6e8e57867e6a527dda0ecd6357591a23" name="ga6e8e57867e6a527dda0ecd6357591a23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6e8e57867e6a527dda0ecd6357591a23">&#9670;&#160;</a></span>LWFSM_STATES_END</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LWFSM_STATES_END</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">states_list</td><td>)</td>
+          <td>&#160;&#160;&#160;} lwfsm_##states_list##_t; /* FSM states */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ends a new list of FSM states description. </p>
+<p >It closes the description of the list of states. </p>
+
+</div>
+</div>
+<a id="ga99ead8ed2ab2224e3b413649e8b8a0b0" name="ga99ead8ed2ab2224e3b413649e8b8a0b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga99ead8ed2ab2224e3b413649e8b8a0b0">&#9670;&#160;</a></span>LWFSM_STATES_FULL_DECL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LWFSM_STATES_FULL_DECL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fsm_state, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fsm_state_name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fsm_state_function&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;redefine_me_in_the_code</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Declares a new FSM state - Model #2. </p>
+<p >It adds a new state in the FSM. This macro must be redefined in the code depending on what is being defined: list of states, list of state names, fsm table.</p>
+<p >See: <a class="el" href="lwfsm__app__model2__template_8c.html" title="LwFSM application file.">lwfsm_app_model2_template.c</a> </p>
+
+</div>
+</div>
+<a id="gac21ce3d980668fa04aa139d8668562c7" name="gac21ce3d980668fa04aa139d8668562c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac21ce3d980668fa04aa139d8668562c7">&#9670;&#160;</a></span>LWFSM_STATES_START</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LWFSM_STATES_START</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">states_list</td><td>)</td>
+          <td>&#160;&#160;&#160;typedef enum {</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Starts a new list of FSM states description. </p>
+<p >It starts the description of the list of states. </p>
+
+</div>
+</div>
+<a id="ga161fd13c3f0fc1d82a3bc22a58fa633e" name="ga161fd13c3f0fc1d82a3bc22a58fa633e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga161fd13c3f0fc1d82a3bc22a58fa633e">&#9670;&#160;</a></span>LWFSM_STOP_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LWFSM_STOP_ERROR&#160;&#160;&#160;0xFFFFFFFFUL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fake FSM state indicating to stop running the FSM (error encountered) </p>
+<p >We want to stop the FSM processing as an unexpected error occurred. </p>
+
+</div>
+</div>
+<a id="ga715a6eaac42f18c17cdb876aa6ba603b" name="ga715a6eaac42f18c17cdb876aa6ba603b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga715a6eaac42f18c17cdb876aa6ba603b">&#9670;&#160;</a></span>LWFSM_STOP_SUCCESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LWFSM_STOP_SUCCESS&#160;&#160;&#160;0xFFFFFFFEUL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fake FSM state indicating to stop running the FSM (normal stop) </p>
+<p >We want to stop the FSM processing as we reached its expected termination point. </p>
+
+</div>
+</div>
+<a id="ga428f76188b9d9fb7891f2e01b5d5703c" name="ga428f76188b9d9fb7891f2e01b5d5703c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga428f76188b9d9fb7891f2e01b5d5703c">&#9670;&#160;</a></span>LWFSM_TABLE_END</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LWFSM_TABLE_END</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">table_name</td><td>)</td>
+          <td>&#160;&#160;&#160;};</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Closes a FSM table description. </p>
+<p >It ends the description of a Finite State Machine. </p>
+
+</div>
+</div>
+<a id="gad87a9e1cce6fc08e89933265e55b6ac7" name="gad87a9e1cce6fc08e89933265e55b6ac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad87a9e1cce6fc08e89933265e55b6ac7">&#9670;&#160;</a></span>LWFSM_TABLE_ENTRY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LWFSM_TABLE_ENTRY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">state_function</td><td>)</td>
+          <td>&#160;&#160;&#160;{state_function},</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Declares a new FSM state function - Model #1. </p>
+<p >It declares a FSM state function in the FSM table. /!\ The state functions must be added in the same order as the states declaration. /!\ </p>
+
+</div>
+</div>
+<a id="ga6fd32c62089945bf5c7ebdcab41de5b7" name="ga6fd32c62089945bf5c7ebdcab41de5b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6fd32c62089945bf5c7ebdcab41de5b7">&#9670;&#160;</a></span>LWFSM_TABLE_START</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LWFSM_TABLE_START</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">table_name</td><td>)</td>
+          <td>&#160;&#160;&#160;const <a class="el" href="structlwfsm__table__row__t.html">lwfsm_table_row_t</a> table_name[] = {</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Starts a new FSM table description. </p>
+<p >It starts the description of a Finite State Machine. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_3c7560893a0e76c6b37768dc38207909.html">lwfsm</a></li><li class="navelem"><a class="el" href="dir_1c14f5b7ea29e800271b9d10d539c621.html">src</a></li><li class="navelem"><a class="el" href="dir_8cd135180bac9eab5fab67b452059a0b.html">include</a></li><li class="navelem"><a class="el" href="dir_16fa97e11b705b921485f52889d6caa3.html">lwfsm</a></li><li class="navelem"><a class="el" href="lwfsm_8h.html">lwfsm.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

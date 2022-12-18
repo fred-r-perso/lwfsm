@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LWFSM: Configuration</title>
+<title>LwFSM: Configuration</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LWFSM<span id="projectnumber">&#160;0.1.0</span>
+   <div id="projectname">LwFSM<span id="projectnumber">&#160;0.1.0</span>
    </div>
    <div id="projectbrief">Lightweight FSM management system for embedded systems</div>
   </td>
@@ -90,13 +90,81 @@ $(document).ready(function(){initNavTree('group___l_w_f_s_m___o_p_t.html',''); i
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle"><div class="title">Configuration</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Default configuration setup.  
-</p>
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:gaa7da043584ce3ffe631c9c03387f35ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___l_w_f_s_m___o_p_t.html#gaa7da043584ce3ffe631c9c03387f35ce">LWFSM_USE_LOG</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:gaa7da043584ce3ffe631c9c03387f35ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables <code>1</code> or disables <code>0</code> the logs.  <a href="group___l_w_f_s_m___o_p_t.html#gaa7da043584ce3ffe631c9c03387f35ce">More...</a><br /></td></tr>
+<tr class="separator:gaa7da043584ce3ffe631c9c03387f35ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga43e377ecd0bdb57a584806926ca8eb2d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___l_w_f_s_m___o_p_t.html#ga43e377ecd0bdb57a584806926ca8eb2d">LWFSM_USE_CONTEXT</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:ga43e377ecd0bdb57a584806926ca8eb2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables <code>1</code> or disables <code>0</code> the FSM context.  <a href="group___l_w_f_s_m___o_p_t.html#ga43e377ecd0bdb57a584806926ca8eb2d">More...</a><br /></td></tr>
+<tr class="separator:ga43e377ecd0bdb57a584806926ca8eb2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad2e0a921e7439210d365c80d8e738f38"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___l_w_f_s_m___o_p_t.html#gad2e0a921e7439210d365c80d8e738f38">LWFSM_USE_PROGMOD2</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:gad2e0a921e7439210d365c80d8e738f38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables <code>1</code> or disables <code>0</code> the Programming Model 2.  <a href="group___l_w_f_s_m___o_p_t.html#gad2e0a921e7439210d365c80d8e738f38">More...</a><br /></td></tr>
+<tr class="separator:gad2e0a921e7439210d365c80d8e738f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Default configuration setup. </p>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga43e377ecd0bdb57a584806926ca8eb2d" name="ga43e377ecd0bdb57a584806926ca8eb2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga43e377ecd0bdb57a584806926ca8eb2d">&#9670;&#160;</a></span>LWFSM_USE_CONTEXT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LWFSM_USE_CONTEXT&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enables <code>1</code> or disables <code>0</code> the FSM context. </p>
+<p >It enables the possibility to pass a context from one FSM state to another use applicative context by default </p>
+
+</div>
+</div>
+<a id="gaa7da043584ce3ffe631c9c03387f35ce" name="gaa7da043584ce3ffe631c9c03387f35ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa7da043584ce3ffe631c9c03387f35ce">&#9670;&#160;</a></span>LWFSM_USE_LOG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LWFSM_USE_LOG&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enables <code>1</code> or disables <code>0</code> the logs. </p>
+<p >It enables the logging mechanism (one log level only) use logs by default </p>
+
+</div>
+</div>
+<a id="gad2e0a921e7439210d365c80d8e738f38" name="gad2e0a921e7439210d365c80d8e738f38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad2e0a921e7439210d365c80d8e738f38">&#9670;&#160;</a></span>LWFSM_USE_PROGMOD2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LWFSM_USE_PROGMOD2&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enables <code>1</code> or disables <code>0</code> the Programming Model 2. </p>
+<p >It enables the possibility to have a single declaration of the FSM states programming model 2 is available by default </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

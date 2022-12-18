@@ -1,6 +1,6 @@
 /**
- * \file            lwfsm_log.h
- * \brief           LwFSM LOGions
+ * @file            lwfsm_log.h
+ * @brief           LwFSM logging service
  */
 
 /*
@@ -41,27 +41,27 @@ extern "C" {
 #endif /* __cplusplus */
 
 /**
- * \defgroup        LWFSM_LOG service
- * \brief           Default LOG service
- * \{
+ * @defgroup        LWFSM_LOG Logging service
+ * @brief           Default LOG service
+ * @{
  */
 
 /**
- * \brief           Logging service
+ * @brief           Logging service
  *
  * The default porting relies on the lib-C printf service.
  * It is up to the project to port this service to the targeted hardware.
  */
 #if LWFSM_USE_LOG == 1
 #ifndef LWFSM_LOG
-#define LWFSM_LOG printf
+#define LWFSM_LOG (void)printf
 #endif /* FSM_LOG */
 #else
 #define LWFSM_LOG(...)
 #endif /* LWFSM_USE_LOG */
 
 /**
- * \}
+ * @}
  */
 
 #ifdef __cplusplus

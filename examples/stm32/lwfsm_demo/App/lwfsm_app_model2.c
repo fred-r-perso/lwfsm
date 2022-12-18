@@ -1,6 +1,6 @@
 /**
- * \file            lwfsm_app_template.c
- * \brief           LwFSM application file
+ * @file            lwfsm_app_template.c
+ * @brief           LwFSM application file
  */
 
 /*
@@ -35,6 +35,7 @@
 /* Add your own includes here */
 #include "main.h"
 #include "lwfsm.h"
+#include "lwfsm_app.h"
 
 /* declare your FSM state C function prototypes here */
 static uint32_t prv_initial_state(void * opaque_ctxt);
@@ -72,7 +73,7 @@ LWFSM_TABLE_END(my_state_machineM2)
 /* FSM task entry point */
 void myAppTaskM2(void * p_ctxt)
 {
-  lwfsm_status_t ret = lwfsm_init_state_machineM2(&my_lwfsm_ctxt, my_state_machineM2, my_states_namesM2, INIT_STATE, DUMMY_STATE);
+  lwfsm_status_t ret = lwfsm_init_state_machineM2(&my_lwfsm_ctxt, my_state_machineM2, my_states_namesM2, (uint32_t)INIT_STATE, (uint32_t)DUMMY_STATE);
 
   if (LWFSM_OK == ret)
   {

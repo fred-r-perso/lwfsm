@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "LWFSM", "index.html", [
+  [ "LwFSM", "index.html", [
     [ "Modules", "modules.html", "modules" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
