@@ -78,7 +78,7 @@ void myAppTaskM1(void * p_ctxt)
 
   if (LWFSM_ERROR == ret)
   {
-    /* implment your code here */
+    /* implement your code here */
     while(1);
   }
 }
@@ -86,11 +86,11 @@ void myAppTaskM1(void * p_ctxt)
 /* Implement your FSM states here */
 static uint32_t prv_initial_state(void * opaque_ctxt)
 {
-  while (gButtonCnt < 3)
+  while (gButtonCnt < 3U)
   {
   	if (gButtonCnt > *(uint32_t *)opaque_ctxt)
   	{
-  		printf("gButtonCnt=%lu\r\n", gButtonCnt);
+      (void)printf("gButtonCnt=%lu\r\n", gButtonCnt);
   		*(uint32_t *)opaque_ctxt = gButtonCnt;
   	}
     /** Enter sleep mode.
@@ -99,16 +99,16 @@ static uint32_t prv_initial_state(void * opaque_ctxt)
     HAL_PWR_EnterSLEEPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
   }
 
-  return INTER_STATE;
+  return (uint32_t)INTER_STATE;
 }
 
 static uint32_t prv_intermediate_state(void * opaque_ctxt)
 {
-	while (gButtonCnt < 6)
+	while (gButtonCnt < 6U)
 	{
   	if (gButtonCnt > *(uint32_t *)opaque_ctxt)
   	{
-  		printf("gButtonCnt=%lu\r\n", gButtonCnt);
+  		(void)printf("gButtonCnt=%lu\r\n", gButtonCnt);
   		*(uint32_t *)opaque_ctxt = gButtonCnt;
   	}
 		/** Enter sleep mode.
@@ -117,16 +117,16 @@ static uint32_t prv_intermediate_state(void * opaque_ctxt)
 		HAL_PWR_EnterSLEEPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
 	}
 
-	return FINAL_STATE;
+	return (uint32_t)FINAL_STATE;
 }
 
 static uint32_t prv_final_state(void * opaque_ctxt)
 {
-	while (gButtonCnt < 11)
+	while (gButtonCnt < 11U)
 	{
   	if (gButtonCnt > *(uint32_t *)opaque_ctxt)
   	{
-  		printf("gButtonCnt=%lu\r\n", gButtonCnt);
+  		(void)printf("gButtonCnt=%lu\r\n", gButtonCnt);
   		*(uint32_t *)opaque_ctxt = gButtonCnt;
   	}
 		/** Enter sleep mode.
@@ -135,5 +135,5 @@ static uint32_t prv_final_state(void * opaque_ctxt)
 		HAL_PWR_EnterSLEEPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
 	}
 
-  return LWFSM_STOP_SUCCESS;
+  return (uint32_t)LWFSM_STOP_SUCCESS;
 }
