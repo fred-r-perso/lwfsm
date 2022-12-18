@@ -1,6 +1,6 @@
 /**
- * \file            lwfsm_app_model2_template.c
- * \brief           LwFSM application file
+ * @file            lwfsm_app_model2_template.c
+ * @brief           LwFSM application file
  */
 
 /*
@@ -91,17 +91,17 @@ void myAppTaskM2(void * p_ctxt);
 static uint32_t prv_initial_state(void * opaque_ctxt)
 {
   /* your code goes here */
-  return INTER_STATE;
+  return (uint32_t)INTER_STATE;
 }
 
 static uint32_t prv_intermediate_state(void * opaque_ctxt)
 {
   /* your code goes here */
-  return FINAL_STATE;
+  return (uint32_t)FINAL_STATE;
 }
 
 static uint32_t prv_final_state(void * opaque_ctxt)
 {
   /* your code goes here */
-  return LWFSM_STOP_SUCCESS;
+  return (uint32_t)LWFSM_STOP_SUCCESS;
 }

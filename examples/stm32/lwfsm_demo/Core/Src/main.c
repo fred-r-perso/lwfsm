@@ -92,7 +92,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-  printf("***** LWFSM demo project *****\r\n");
+  printf("***** LwFSM demo project *****\r\n");
   HAL_GPIO_WritePin(GPIOH, LED_RED_Pin|STATUS_LED_Pin, GPIO_PIN_SET);
 
   /* Run the FSM task : programming model 1 */
@@ -104,7 +104,7 @@ int main(void)
   gButtonCnt = 0;
   my_user_ctxt = 0;
   myAppTaskM2(&my_user_ctxt);
-  printf("***** LWFSM demo project completed.*****\r\n");
+  printf("***** LwFSM demo project completed.*****\r\n");
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -112,8 +112,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-  	HAL_GPIO_TogglePin(GPIOH, STATUS_LED_Pin);
-  	HAL_Delay(1000);
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

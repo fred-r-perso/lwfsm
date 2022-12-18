@@ -1,6 +1,6 @@
 /**
- * \file            lwfsm_app_model1_template.c
- * \brief           LwFSM application file
+ * @file            lwfsm_app_model1_template.c
+ * @brief           LwFSM application file
  */
 
 /*
@@ -41,7 +41,7 @@ static uint32_t prv_intermediate_state(void * opaque_ctxt);
 static uint32_t prv_final_state(void * opaque_ctxt);
 
 /* declare your lwfsm context here */
-static lwfsm_ctxt_t my_lwfsm_ctxt;
+lwfsm_ctxt_t my_lwfsm_ctxt;
 
 /* Declare your FSM states here */
 LWFSM_STATES_START(my_fsm_states)
@@ -86,17 +86,17 @@ void myAppTask(void * p_ctxt)
 static uint32_t prv_initial_state(void * opaque_ctxt)
 {
   /* your code goes here */
-  return INTER_STATE;
+  return (uint32_t)INTER_STATE;
 }
 
 static uint32_t prv_intermediate_state(void * opaque_ctxt)
 {
   /* your code goes here */
-  return FINAL_STATE;
+  return (uint32_t)FINAL_STATE;
 }
 
 static uint32_t prv_final_state(void * opaque_ctxt)
 {
   /* your code goes here */
-  return LWFSM_STOP_SUCCESS;
+  return (uint32_t)LWFSM_STOP_SUCCESS;
 }

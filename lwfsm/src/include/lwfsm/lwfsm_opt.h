@@ -1,6 +1,6 @@
 /**
- * \file            lwfsm_opt.h
- * \brief           LwFSM options
+ * @file            lwfsm_opt.h
+ * @brief           LwFSM options
  */
 
 /*
@@ -47,40 +47,40 @@ extern "C" {
 #endif /* __cplusplus */
 
 /**
- * \defgroup        LWFSM_OPT Configuration
- * \brief           Default configuration setup
- * \{
+ * @defgroup        LWFSM_OPT Configuration
+ * @brief           Default configuration setup
+ * @{
  */
 
 /**
- * \brief           Enables `1` or disables `0` the logs
+ * @brief           Enables `1` or disables `0` the logs
  *
  * It enables the logging mechanism (one log level only)
  */
 #ifndef LWFSM_USE_LOG
-#define LWFSM_USE_LOG 1
+#define LWFSM_USE_LOG 1 /*!< use logs by default */
 #endif /* LWFSM_USE_LOG */
 
 /**
- * \brief           Enables `1` or disables `0` the FSM context
+ * @brief           Enables `1` or disables `0` the FSM context
  *
  * It enables the possibility to pass a context from one FSM state to another
  */
 #ifndef LWFSM_USE_CONTEXT
-#define LWFSM_USE_CONTEXT 1
+#define LWFSM_USE_CONTEXT 1 /*!< use applicative context by default */
 #endif /* LWFSM_USE_CONTEXT */
 
 /**
- * \brief           Enables `1` or disables `0` the Programming Model 2
+ * @brief           Enables `1` or disables `0` the Programming Model 2
  *
  * It enables the possibility to have a single declaration of the FSM states
  */
 #ifndef LWFSM_USE_PROGMOD2
-#define LWFSM_USE_PROGMOD2 1
+#define LWFSM_USE_PROGMOD2 1 /*!< programming model 2 is available by default */
 #endif /* LWFSM_USE_PROGMOD2 */
 
 /**
- * \}
+ * @}
  */
 
 #ifdef __cplusplus

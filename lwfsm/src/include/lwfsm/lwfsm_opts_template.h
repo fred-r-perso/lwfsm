@@ -1,6 +1,6 @@
 /**
- * \file            lwfsm_opts_template.h
- * \brief           LwFSM configuration file
+ * @file            lwfsm_opts_template.h
+ * @brief           LwFSM configuration file
  */
 
 /*
