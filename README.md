@@ -7,7 +7,9 @@ LwFSM is a Finite State Machine (FSM) engine and its objective is to:
 - be suitable for embedded systems,
 - offer an abstract syntax in the FSM declaration.
 
-> **_NOTE:_**  This code has no link with the author's employer, it is provided by the author in his own name and as an individual.
+> **_NOTE:__** This code follows the principles of the lw modules from https://github.com/MaJerle
+
+> **_NOTE:_**  This code is provided by the author in his own name.
 
 ## How to use LwFSM ?
 
