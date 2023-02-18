@@ -41,4 +41,4 @@ This example project contains:
 
 ## Facing issues ?
 
-Please report issues in [github](https://github.com/fred-r/lwfsm/issues).
+Please report issues in [github](https://github.com/fred-r-perso/lwfsm/issues).
