@@ -2,6 +2,11 @@ cmake_minimum_required(VERSION 3.22)
 
 project(lwfsm_demo)
 
+# to ease the use of valgrind
+include(CTest)
+add_test(NAME TestDemo
+         COMMAND lwfsm_demo)
+
 # define the executable for this project: the target name is ${PROJECT_NAME}
 add_executable(${PROJECT_NAME})
 
