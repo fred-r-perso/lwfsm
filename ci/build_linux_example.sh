@@ -17,7 +17,7 @@ set -x
 ###################
 
 apt-get update
-apt-get -y install git rsync gpg ca-certificates wget
+apt-get -y install git rsync gpg ca-certificates wget software-properties-common
 
 # latest CMAKE
 apt-get -y update && \
@@ -28,7 +28,7 @@ wget --no-check-certificate -v 0 -O - https://apt.kitware.com/keys/kitware-archi
 gpg --dearmor key.asc
 tee /etc/apt/trusted.gpg.d/kitware.gpg >/dev/null < key.asc.gpg
 
-apt-get -y add-repository "deb https://apt.kitware.com/ubuntu/ $(lsb_release -cs) main"
+apt-add-repository "deb https://apt.kitware.com/ubuntu/ $(lsb_release -cs) main"
 apt-get -y update
 
 add-apt-repository 'deb [arch=amd64] https://apt.kitware.com/ubuntu bionic main'
