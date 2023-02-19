@@ -17,7 +17,7 @@ set -x
 ###################
 
 apt-get update
-apt-get -y install git rsync gpg ca-certificates wget software-properties-common tar
+apt-get -y install git rsync gpg ca-certificates wget software-properties-common tar make
 
 # latest CMAKE
 #apt-get -y update && \
@@ -39,9 +39,9 @@ apt-get -y install git rsync gpg ca-certificates wget software-properties-common
 #rm /etc/apt/trusted.gpg.d/kitware.gpg
 
 #Debian
-wget --no-check-certificate -v 0 -O https://github.com/Kitware/CMake/releases/download/v3.24.2/cmake-3.24.2.tar.gz
-tar -zxvf cmake-3.24.2.tar.gz
-cd cmake-3.24.2
+wget --no-check-certificate -v 0 -O https://github.com/Kitware/CMake/releases/download/v3.24.3/cmake-3.24.3.tar.gz
+tar -zxvf cmake-3.24.3.tar.gz
+cd cmake-3.24.3
 ./bootstrap
 make
 make install
