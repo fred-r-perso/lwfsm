@@ -19,6 +19,9 @@ set -x
 apt-get update
 apt-get -y install git rsync python3-sphinx python3-sphinx-rtd-theme doxygen python3-breathe
 
+# Ownership issue patch
+git config --global --add safe.directory /__w/lwfsm/lwfsm
+
 #####################
 # DECLARE VARIABLES #
 #####################
