@@ -24,7 +24,7 @@ apt-get -y update && \
 apt-get -y install -y software-properties-common lsb-release && \
 apt-get -y clean all
 
-wget --no-check-certificate -v0 -O - https://apt.kitware.com/keys/kitware-archive-latest.asc > key.asc
+wget --no-check-certificate -v 0 -O - https://apt.kitware.com/keys/kitware-archive-latest.asc > key.asc
 gpg --dearmor key.asc
 tee /etc/apt/trusted.gpg.d/kitware.gpg >/dev/null < key.asc.gpg
 
