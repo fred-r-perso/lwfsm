@@ -27,9 +27,9 @@ apt-get -y clean all
 wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | gpg --dearmor - | tee /etc/apt/trusted.gpg.d/kitware.gpg >/dev/null
 
 apt-get -y-add-repository "deb https://apt.kitware.com/ubuntu/ $(lsb_release -cs) main"
-
 apt-get -y update
-apt-get -y install kitware-archive-keyring
+
+add-apt-repository 'deb [arch=amd64] https://apt.kitware.com/ubuntu bionic main'
 rm /etc/apt/trusted.gpg.d/kitware.gpg
 
 apt-get -y update
@@ -45,8 +45,5 @@ git config --global --add safe.directory /__w/lwfsm/lwfsm
 cmake ./examples/linux_x86_64/lwfsm_demo/
 cmake --build ./examples/linux_x86_64/lwfsm_demo/
  
-
-popd # return to main repo sandbox root
-
 # exit cleanly
 exit $?
