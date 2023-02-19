@@ -24,7 +24,7 @@ apt-get -y update && \
 apt-get -y install -y software-properties-common lsb-release && \
 apt-get -y clean all
 
-wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | gpg --dearmor - | sudo tee /etc/apt/trusted.gpg.d/kitware.gpg >/dev/null
+wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | gpg --dearmor - | tee /etc/apt/trusted.gpg.d/kitware.gpg >/dev/null
 
 apt-get -y-add-repository "deb https://apt.kitware.com/ubuntu/ $(lsb_release -cs) main"
 
