@@ -1,5 +1,7 @@
 # __LWFSM : *Lightweight FSM management system for embedded systems*__
 
+Read the docs on the [GitHub Pages](https://fred-r-perso.github.io/lwfsm/).
+
 ## What is LwFSM ?
 
 LwFSM is a Finite State Machine (FSM) engine and its objective is to:

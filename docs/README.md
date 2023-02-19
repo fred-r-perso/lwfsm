@@ -2,7 +2,7 @@
 
 The documentation is handled with [Sphinx](https://www.sphinx-doc.org/en/master/index.html) and [Read the Docs](https://readthedocs.org/).
 
-The generated documentation is hosted on the GitHub Pages site.
+The generated documentation is hosted on the [GitHub Pages](https://fred-r-perso.github.io/lwfsm/).
 
 ## Local build
 ```
