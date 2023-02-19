@@ -1,0 +1,7 @@
+{
+    "cmake.configureOnOpen": true,
+    "files.associations": {
+        "lwfsm.h": "c",
+        "lwfsm_app.h": "c"
+    }
+}
