@@ -17,7 +17,7 @@ set -x
 ###################
 
 apt-get update
-apt-get -y install git rsync gpg ca-certificates
+apt-get -y install git rsync gpg ca-certificates wget
 
 # latest CMAKE
 apt-get -y update && \
