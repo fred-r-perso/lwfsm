@@ -22,8 +22,8 @@ jobs:
         git clone --depth 1 "https://token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" .
       shell: bash
 
-    - name: Execute script to build our documentation and update pages
+    - name: Execute script to build the basic linux example
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: "cmake ./examples/linux_x86_64/lwfsm_demo/;cmake --build ./examples/linux_x86_64/lwfsm_demo/"
+      run: "ci/build_linux_example.sh"
       shell: bash
