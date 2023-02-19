@@ -17,7 +17,7 @@ set -x
 ###################
 
 apt-get update
-apt-get -y install git rsync gpg ca-certificates wget software-properties-common tar make build-essential openssl libssl-dev libcrypto-dev
+apt-get -y install git rsync gpg ca-certificates wget software-properties-common tar make build-essential openssl libssl-dev libcrypto++-dev
 
 # latest CMAKE
 #apt-get -y update && \
