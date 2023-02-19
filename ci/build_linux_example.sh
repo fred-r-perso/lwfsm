@@ -17,26 +17,36 @@ set -x
 ###################
 
 apt-get update
-apt-get -y install git rsync gpg ca-certificates wget software-properties-common
+apt-get -y install git rsync gpg ca-certificates wget software-properties-common tar
 
 # latest CMAKE
-apt-get -y update && \
-apt-get -y install -y software-properties-common lsb-release && \
-apt-get -y clean all
+#apt-get -y update && \
+#apt-get -y install -y software-properties-common lsb-release && \
+#apt-get -y clean all
 
-wget --no-check-certificate -v 0 -O - https://apt.kitware.com/keys/kitware-archive-latest.asc > key.asc
-gpg --dearmor key.asc
-tee /etc/apt/trusted.gpg.d/kitware.gpg >/dev/null < key.asc.gpg
+#wget --no-check-certificate -v 0 -O - https://apt.kitware.com/keys/kitware-archive-latest.asc > key.asc
+#gpg --dearmor key.asc
+#tee /etc/apt/trusted.gpg.d/kitware.gpg >/dev/null < key.asc.gpg
 
-apt-add-repository "deb https://apt.kitware.com/ubuntu/ $(lsb_release -cs) main"
-apt-get -y update
+#apt-add-repository "deb https://apt.kitware.com/ubuntu/ $(lsb_release -cs) main"
+#apt-get -y update
 
-add-apt-repository 'deb [arch=amd64] https://apt.kitware.com/ubuntu bionic main'
+#add-apt-repository 'deb [arch=amd64] https://apt.kitware.com/ubuntu bionic main'
 
-apt-get -y update
-apt-get -y install cmake
+#apt-get -y update
+#apt-get -y install cmake
 
-rm /etc/apt/trusted.gpg.d/kitware.gpg
+#rm /etc/apt/trusted.gpg.d/kitware.gpg
+
+#Debian
+wget --no-check-certificate -v 0 -O https://github.com/Kitware/CMake/releases/download/v3.24.2/cmake-3.24.2.tar.gz
+tar -zxvf cmake-3.24.2.tar.gz
+cd cmake-3.24.2
+./bootstrap
+make
+make install
+cmake --version
+cd ..
 
 # Ownership issue patch
 git config --global --add safe.directory /__w/lwfsm/lwfsm
