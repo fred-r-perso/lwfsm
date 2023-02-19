@@ -46,7 +46,6 @@ cd cmake-3.24.3
 make
 make install
 cmake --version
-cd ..
 
 # Ownership issue patch
 git config --global --add safe.directory /__w/lwfsm/lwfsm
@@ -54,9 +53,9 @@ git config --global --add safe.directory /__w/lwfsm/lwfsm
 #################
 # BUILD EXAMPLE #
 #################
+cd /__w/lwfsm/examples/linux_x86_64/lwfsm_demo/
+cmake .
+cmake --build .
 
-cmake ./examples/linux_x86_64/lwfsm_demo/
-cmake --build ./examples/linux_x86_64/lwfsm_demo/
- 
 # exit cleanly
 exit $?
