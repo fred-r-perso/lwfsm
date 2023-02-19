@@ -53,7 +53,7 @@ git config --global --add safe.directory /__w/lwfsm/lwfsm
 #################
 # BUILD EXAMPLE #
 #################
-cd /__w/lwfsm/examples/linux_x86_64/lwfsm_demo/
+cd ../examples/linux_x86_64/lwfsm_demo
 cmake .
 cmake --build .
 
