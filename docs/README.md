@@ -14,3 +14,4 @@ Build finished. The HTML pages are in _build/html.
 ## Github updates
 
 This is handled via build_docs.sh
+The 'gh-pages' is updating when pushon on 'develop' or 'master'.
