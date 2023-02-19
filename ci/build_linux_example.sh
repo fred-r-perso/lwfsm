@@ -17,14 +17,16 @@ set -x
 ###################
 
 apt-get update
-apt-get -y install git rsync gpg
+apt-get -y install git rsync gpg ca-certificates
 
 # latest CMAKE
 apt-get -y update && \
 apt-get -y install -y software-properties-common lsb-release && \
 apt-get -y clean all
 
-wget --no-check-certificate -v0 -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | gpg --dearmor - | tee /etc/apt/trusted.gpg.d/kitware.gpg >/dev/null
+wget --no-check-certificate -v0 -O - https://apt.kitware.com/keys/kitware-archive-latest.asc > key.asc
+gpg --dearmor key.asc
+tee /etc/apt/trusted.gpg.d/kitware.gpg >/dev/null < key.asc.gpg
 
 apt-get -y add-repository "deb https://apt.kitware.com/ubuntu/ $(lsb_release -cs) main"
 apt-get -y update
