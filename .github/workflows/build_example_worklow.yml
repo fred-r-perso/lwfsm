@@ -1,4 +1,4 @@
-name: docs_pages_workflow
+name: build_example_workflow
 
 # execute this workflow automatically when we push to develop or master
 on:
@@ -25,5 +25,5 @@ jobs:
     - name: Execute script to build our documentation and update pages
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: "docs/build_docs.sh"
+      run: "cmake ./examples/linux_x86_64/lwfsm_demo/;cmake --build ./examples/linux_x86_64/lwfsm_demo/"
       shell: bash
