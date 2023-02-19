@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x
 ################################################################################
-# File:    buildDocs.sh
+# File:    build_docs.sh
 # Purpose: Script that builds our documentation using sphinx and updates GitHub
 #          Pages. This script is executed by:
 #            .github/workflows/docs_pages_workflow.yml
@@ -17,7 +17,7 @@ set -x
 ###################
 
 apt-get update
-apt-get -y install git rsync python3-sphinx python3-sphinx-rtd-theme
+apt-get -y install git rsync python3-sphinx python3-sphinx-rtd-theme doxygen python3-breathe
 
 #####################
 # DECLARE VARIABLES #
