@@ -26,14 +26,15 @@ apt-get -y clean all
 
 wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | gpg --dearmor - | tee /etc/apt/trusted.gpg.d/kitware.gpg >/dev/null
 
-apt-get -y-add-repository "deb https://apt.kitware.com/ubuntu/ $(lsb_release -cs) main"
+apt-get -y add-repository "deb https://apt.kitware.com/ubuntu/ $(lsb_release -cs) main"
 apt-get -y update
 
 add-apt-repository 'deb [arch=amd64] https://apt.kitware.com/ubuntu bionic main'
-rm /etc/apt/trusted.gpg.d/kitware.gpg
 
 apt-get -y update
 apt-get -y install cmake
+
+rm /etc/apt/trusted.gpg.d/kitware.gpg
 
 # Ownership issue patch
 git config --global --add safe.directory /__w/lwfsm/lwfsm
