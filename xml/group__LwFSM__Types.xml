@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="group__LwFSM__Types" kind="group">
+    <compoundname>LwFSM_Types</compoundname>
+    <title>LwFSM FSM types</title>
+    <innerclass refid="structlwfsm__table__row__t" prot="public">lwfsm_table_row_t</innerclass>
+    <innerclass refid="structlwfsm__ctxt__t" prot="public">lwfsm_ctxt_t</innerclass>
+    <innerclass refid="structlwfsm__ctxt2__t" prot="public">lwfsm_ctxt2_t</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__LwFSM__Types_1gac5dfb37d24f02ace29c00c45af5553ec" prot="public" static="no">
+        <name>lwfsm_status_t</name>
+        <enumvalue id="group__LwFSM__Types_1ggac5dfb37d24f02ace29c00c45af5553ecaad55026fd5428c45adb2b3072118c616" prot="public">
+          <name>LWFSM_OK</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The FSM state machine call succeeded </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LwFSM__Types_1ggac5dfb37d24f02ace29c00c45af5553ecabdafd9ba79b33c3afdd8a644efebe8a6" prot="public">
+          <name>LWFSM_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The FSM state machine call encountered an error </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Return value of the FSM run function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm.h" line="80" column="1" bodyfile="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm.h" bodystart="80" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__LwFSM__Types_1ga1f824da4c340448f2fab98a2a3d7111a" prot="public" static="no">
+        <type>uint32_t(*</type>
+        <definition>typedef uint32_t(* lwfsm_state_func_t) (void *opaque_ctxt)</definition>
+        <argsstring>)(void *opaque_ctxt)</argsstring>
+        <name>lwfsm_state_func_t</name>
+        <briefdescription>
+<para>C function implementing a FSM state. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>opaque_ctxt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an opaque context for the state (if LWFSM_USE_CONTEXT is enabled) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the next FSM state</para></simplesect>
+Function implementing the logic a FSM state must run. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm.h" line="61" column="1" bodyfile="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Types used to describe the Finite State Machine. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

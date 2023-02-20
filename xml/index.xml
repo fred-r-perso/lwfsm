@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
+  <compound refid="structlwfsm__ctxt2__t" kind="struct"><name>lwfsm_ctxt2_t</name>
+    <member refid="structlwfsm__ctxt2__t_1ab8c24172e983044f0972da709ac8fec4" kind="variable"><name>fsm_table</name></member>
+    <member refid="structlwfsm__ctxt2__t_1a56b2fcc9bfe0cf695a6742f0bb42ce55" kind="variable"><name>cur_state</name></member>
+    <member refid="structlwfsm__ctxt2__t_1a61d5b6d225fd8e454dd1e9bb3a1d6fe2" kind="variable"><name>log_names</name></member>
+    <member refid="structlwfsm__ctxt2__t_1a05ffe2cf457de5fcb95d56ec2a9fab85" kind="variable"><name>nb_states</name></member>
+  </compound>
+  <compound refid="structlwfsm__ctxt__t" kind="struct"><name>lwfsm_ctxt_t</name>
+    <member refid="structlwfsm__ctxt__t_1ab8c24172e983044f0972da709ac8fec4" kind="variable"><name>fsm_table</name></member>
+    <member refid="structlwfsm__ctxt__t_1a56b2fcc9bfe0cf695a6742f0bb42ce55" kind="variable"><name>cur_state</name></member>
+    <member refid="structlwfsm__ctxt__t_1a61d5b6d225fd8e454dd1e9bb3a1d6fe2" kind="variable"><name>log_names</name></member>
+  </compound>
+  <compound refid="structlwfsm__table__row__t" kind="struct"><name>lwfsm_table_row_t</name>
+    <member refid="structlwfsm__table__row__t_1a0009298462d5a61e915ac3387d841a2a" kind="variable"><name>state_function</name></member>
+  </compound>
+  <compound refid="lwfsm_8h" kind="file"><name>lwfsm.h</name>
+    <member refid="group__LwFSM__Macros_1ga715a6eaac42f18c17cdb876aa6ba603b" kind="define"><name>LWFSM_STOP_SUCCESS</name></member>
+    <member refid="group__LwFSM__Macros_1ga161fd13c3f0fc1d82a3bc22a58fa633e" kind="define"><name>LWFSM_STOP_ERROR</name></member>
+    <member refid="group__LwFSM__Macros_1gac21ce3d980668fa04aa139d8668562c7" kind="define"><name>LWFSM_STATES_START</name></member>
+    <member refid="group__LwFSM__Macros_1ga7ca4246c6f9ad044558e01e86bf50780" kind="define"><name>LWFSM_STATES_DECL</name></member>
+    <member refid="group__LwFSM__Macros_1ga99ead8ed2ab2224e3b413649e8b8a0b0" kind="define"><name>LWFSM_STATES_FULL_DECL</name></member>
+    <member refid="group__LwFSM__Macros_1ga6e8e57867e6a527dda0ecd6357591a23" kind="define"><name>LWFSM_STATES_END</name></member>
+    <member refid="group__LwFSM__Macros_1ga6fd32c62089945bf5c7ebdcab41de5b7" kind="define"><name>LWFSM_TABLE_START</name></member>
+    <member refid="group__LwFSM__Macros_1gad87a9e1cce6fc08e89933265e55b6ac7" kind="define"><name>LWFSM_TABLE_ENTRY</name></member>
+    <member refid="group__LwFSM__Macros_1ga428f76188b9d9fb7891f2e01b5d5703c" kind="define"><name>LWFSM_TABLE_END</name></member>
+    <member refid="group__LwFSM__Macros_1ga5fdaff8a2635b38f9115e138087e1d28" kind="define"><name>LWFSM_LOGS_NAME_START</name></member>
+    <member refid="group__LwFSM__Macros_1gacf7268f80d00bd916e65322d97c90b7b" kind="define"><name>LWFSM_LOG_NAME_DECL</name></member>
+    <member refid="group__LwFSM__Macros_1ga14f596f7e0685f15a93bc45c99655bf5" kind="define"><name>LWFSM_LOGS_NAME_END</name></member>
+    <member refid="group__LwFSM__Types_1gac5dfb37d24f02ace29c00c45af5553ec" kind="enum"><name>lwfsm_status_t</name></member>
+    <member refid="group__LwFSM__Types_1ggac5dfb37d24f02ace29c00c45af5553ecaad55026fd5428c45adb2b3072118c616" kind="enumvalue"><name>LWFSM_OK</name></member>
+    <member refid="group__LwFSM__Types_1ggac5dfb37d24f02ace29c00c45af5553ecabdafd9ba79b33c3afdd8a644efebe8a6" kind="enumvalue"><name>LWFSM_ERROR</name></member>
+    <member refid="group__LwFSM__Types_1ga1f824da4c340448f2fab98a2a3d7111a" kind="typedef"><name>lwfsm_state_func_t</name></member>
+    <member refid="group__LwFSM__API__M1_1ga5d031ea56c1b3524b1ff6978f636fb5b" kind="function"><name>lwfsm_init_state_machine</name></member>
+    <member refid="group__LwFSM__API__M1_1gad54a06d0aa371d4a631a1fe056f8bd0e" kind="function"><name>lwfsm_run_state_machine</name></member>
+    <member refid="group__LwFSM__API__M2_1gaa16284f1422ff96d7bc550deb7ef97ce" kind="function"><name>lwfsm_init_state_machineM2</name></member>
+    <member refid="group__LwFSM__API__M2_1ga711182eae8128494523ed4865433e2d9" kind="function"><name>lwfsm_run_state_machineM2</name></member>
+  </compound>
+  <compound refid="lwfsm__log_8h" kind="file"><name>lwfsm_log.h</name>
+    <member refid="group__LWFSM__LOG_1gabae58a6ef0111ffa5692f6a487f036f4" kind="define"><name>LWFSM_LOG</name></member>
+  </compound>
+  <compound refid="lwfsm__opt_8h" kind="file"><name>lwfsm_opt.h</name>
+    <member refid="group__LWFSM__OPT_1gaa7da043584ce3ffe631c9c03387f35ce" kind="define"><name>LWFSM_USE_LOG</name></member>
+    <member refid="group__LWFSM__OPT_1ga43e377ecd0bdb57a584806926ca8eb2d" kind="define"><name>LWFSM_USE_CONTEXT</name></member>
+    <member refid="group__LWFSM__OPT_1gad2e0a921e7439210d365c80d8e738f38" kind="define"><name>LWFSM_USE_PROGMOD2</name></member>
+  </compound>
+  <compound refid="lwfsm__opts__template_8h" kind="file"><name>lwfsm_opts_template.h</name>
+  </compound>
+  <compound refid="lwfsm_8c" kind="file"><name>lwfsm.c</name>
+    <member refid="lwfsm_8c_1a62e575b71e3257627e2244374db106a5" kind="define"><name>LWFSM_C</name></member>
+    <member refid="lwfsm_8c_1a021b9a2d11d33b0aa250bb99c55f4f2d" kind="function"><name>lwfsm_init_state_machine</name></member>
+    <member refid="lwfsm_8c_1a2fb7e914a6f79a34caaa7348f7c7ad50" kind="function"><name>lwfsm_run_state_machine</name></member>
+  </compound>
+  <compound refid="lwfsm__app__model1__template_8c" kind="file"><name>lwfsm_app_model1_template.c</name>
+    <member refid="lwfsm__app__model1__template_8c_1a9310e8509fc7e1205642f1bbb102347c" kind="define"><name>LWFSM_APP_C</name></member>
+    <member refid="lwfsm__app__model1__template_8c_1adc23e7f72fae3bcde0a6d431a2fc73d1" kind="variable"><name>my_lwfsm_ctxt</name></member>
+    <member refid="lwfsm__app__model1__template_8c_1a3eabf2eaa748f7c8e80d9e0458e054f6" kind="function"><name>prv_initial_state</name></member>
+    <member refid="lwfsm__app__model1__template_8c_1ae36b77c7cab55744dc92d8eaf8a7ac4a" kind="function"><name>prv_intermediate_state</name></member>
+    <member refid="lwfsm__app__model1__template_8c_1a6358210cc75a040058daa86d99250800" kind="function"><name>prv_final_state</name></member>
+    <member refid="lwfsm__app__model1__template_8c_1ae96ba9a879cd1ddfa30b9a9eb8ef6fc2" kind="function"><name>LWFSM_STATES_START</name></member>
+  </compound>
+  <compound refid="lwfsm__app__model2__template_8c" kind="file"><name>lwfsm_app_model2_template.c</name>
+    <member refid="lwfsm__app__model2__template_8c_1a9310e8509fc7e1205642f1bbb102347c" kind="define"><name>LWFSM_APP_C</name></member>
+    <member refid="lwfsm__app__model2__template_8c_1a99ead8ed2ab2224e3b413649e8b8a0b0" kind="define"><name>LWFSM_STATES_FULL_DECL</name></member>
+    <member refid="lwfsm__app__model2__template_8c_1a99ead8ed2ab2224e3b413649e8b8a0b0" kind="define"><name>LWFSM_STATES_FULL_DECL</name></member>
+    <member refid="lwfsm__app__model2__template_8c_1a99ead8ed2ab2224e3b413649e8b8a0b0" kind="define"><name>LWFSM_STATES_FULL_DECL</name></member>
+    <member refid="lwfsm__app__model2__template_8c_1a354d69c57cc9ef1f15f8a2fbe5b9816f" kind="variable"><name>my_lwfsm_ctxt</name></member>
+    <member refid="lwfsm__app__model2__template_8c_1a3eabf2eaa748f7c8e80d9e0458e054f6" kind="function"><name>prv_initial_state</name></member>
+    <member refid="lwfsm__app__model2__template_8c_1ae36b77c7cab55744dc92d8eaf8a7ac4a" kind="function"><name>prv_intermediate_state</name></member>
+    <member refid="lwfsm__app__model2__template_8c_1a6358210cc75a040058daa86d99250800" kind="function"><name>prv_final_state</name></member>
+    <member refid="lwfsm__app__model2__template_8c_1aad7bd05f1981a338a85bd85533ea32c9" kind="function"><name>LWFSM_STATES_START</name></member>
+  </compound>
+  <compound refid="lwfsm__app__template_8h" kind="file"><name>lwfsm_app_template.h</name>
+    <member refid="lwfsm__app__template_8h_1a4f7c38dcb793a74f7d13046d7ed8b37a" kind="function"><name>myAppTask</name></member>
+  </compound>
+  <compound refid="group__LwFSM__Types" kind="group"><name>LwFSM_Types</name>
+    <member refid="group__LwFSM__Types_1gac5dfb37d24f02ace29c00c45af5553ec" kind="enum"><name>lwfsm_status_t</name></member>
+    <member refid="group__LwFSM__Types_1ggac5dfb37d24f02ace29c00c45af5553ecaad55026fd5428c45adb2b3072118c616" kind="enumvalue"><name>LWFSM_OK</name></member>
+    <member refid="group__LwFSM__Types_1ggac5dfb37d24f02ace29c00c45af5553ecabdafd9ba79b33c3afdd8a644efebe8a6" kind="enumvalue"><name>LWFSM_ERROR</name></member>
+    <member refid="group__LwFSM__Types_1ga1f824da4c340448f2fab98a2a3d7111a" kind="typedef"><name>lwfsm_state_func_t</name></member>
+  </compound>
+  <compound refid="group__LwFSM__Macros" kind="group"><name>LwFSM_Macros</name>
+    <member refid="group__LwFSM__Macros_1ga715a6eaac42f18c17cdb876aa6ba603b" kind="define"><name>LWFSM_STOP_SUCCESS</name></member>
+    <member refid="group__LwFSM__Macros_1ga161fd13c3f0fc1d82a3bc22a58fa633e" kind="define"><name>LWFSM_STOP_ERROR</name></member>
+    <member refid="group__LwFSM__Macros_1gac21ce3d980668fa04aa139d8668562c7" kind="define"><name>LWFSM_STATES_START</name></member>
+    <member refid="group__LwFSM__Macros_1ga7ca4246c6f9ad044558e01e86bf50780" kind="define"><name>LWFSM_STATES_DECL</name></member>
+    <member refid="group__LwFSM__Macros_1ga99ead8ed2ab2224e3b413649e8b8a0b0" kind="define"><name>LWFSM_STATES_FULL_DECL</name></member>
+    <member refid="group__LwFSM__Macros_1ga6e8e57867e6a527dda0ecd6357591a23" kind="define"><name>LWFSM_STATES_END</name></member>
+    <member refid="group__LwFSM__Macros_1ga6fd32c62089945bf5c7ebdcab41de5b7" kind="define"><name>LWFSM_TABLE_START</name></member>
+    <member refid="group__LwFSM__Macros_1gad87a9e1cce6fc08e89933265e55b6ac7" kind="define"><name>LWFSM_TABLE_ENTRY</name></member>
+    <member refid="group__LwFSM__Macros_1ga428f76188b9d9fb7891f2e01b5d5703c" kind="define"><name>LWFSM_TABLE_END</name></member>
+    <member refid="group__LwFSM__Macros_1ga5fdaff8a2635b38f9115e138087e1d28" kind="define"><name>LWFSM_LOGS_NAME_START</name></member>
+    <member refid="group__LwFSM__Macros_1gacf7268f80d00bd916e65322d97c90b7b" kind="define"><name>LWFSM_LOG_NAME_DECL</name></member>
+    <member refid="group__LwFSM__Macros_1ga14f596f7e0685f15a93bc45c99655bf5" kind="define"><name>LWFSM_LOGS_NAME_END</name></member>
+  </compound>
+  <compound refid="group__LwFSM__API" kind="group"><name>LwFSM_API</name>
+  </compound>
+  <compound refid="group__LwFSM__API__M1" kind="group"><name>LwFSM_API_M1</name>
+    <member refid="group__LwFSM__API__M1_1ga5d031ea56c1b3524b1ff6978f636fb5b" kind="function"><name>lwfsm_init_state_machine</name></member>
+    <member refid="group__LwFSM__API__M1_1gad54a06d0aa371d4a631a1fe056f8bd0e" kind="function"><name>lwfsm_run_state_machine</name></member>
+  </compound>
+  <compound refid="group__LwFSM__API__M2" kind="group"><name>LwFSM_API_M2</name>
+    <member refid="group__LwFSM__API__M2_1gaa16284f1422ff96d7bc550deb7ef97ce" kind="function"><name>lwfsm_init_state_machineM2</name></member>
+    <member refid="group__LwFSM__API__M2_1ga711182eae8128494523ed4865433e2d9" kind="function"><name>lwfsm_run_state_machineM2</name></member>
+  </compound>
+  <compound refid="group__LWFSM__LOG" kind="group"><name>LWFSM_LOG</name>
+    <member refid="group__LWFSM__LOG_1gabae58a6ef0111ffa5692f6a487f036f4" kind="define"><name>LWFSM_LOG</name></member>
+  </compound>
+  <compound refid="group__LWFSM__OPT" kind="group"><name>LWFSM_OPT</name>
+    <member refid="group__LWFSM__OPT_1gaa7da043584ce3ffe631c9c03387f35ce" kind="define"><name>LWFSM_USE_LOG</name></member>
+    <member refid="group__LWFSM__OPT_1ga43e377ecd0bdb57a584806926ca8eb2d" kind="define"><name>LWFSM_USE_CONTEXT</name></member>
+    <member refid="group__LWFSM__OPT_1gad2e0a921e7439210d365c80d8e738f38" kind="define"><name>LWFSM_USE_PROGMOD2</name></member>
+  </compound>
+  <compound refid="dir_8cd135180bac9eab5fab67b452059a0b" kind="dir"><name>/__w/lwfsm/lwfsm/lwfsm/src/include</name>
+  </compound>
+  <compound refid="dir_7c458c29b7d25fb3e7f2a3e306555602" kind="dir"><name>/__w/lwfsm/lwfsm/lwfsm/src/lwfsm</name>
+  </compound>
+  <compound refid="dir_16fa97e11b705b921485f52889d6caa3" kind="dir"><name>/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm</name>
+  </compound>
+  <compound refid="dir_3c7560893a0e76c6b37768dc38207909" kind="dir"><name>/__w/lwfsm/lwfsm/lwfsm</name>
+  </compound>
+  <compound refid="dir_1c14f5b7ea29e800271b9d10d539c621" kind="dir"><name>/__w/lwfsm/lwfsm/lwfsm/src</name>
+  </compound>
+</doxygenindex>

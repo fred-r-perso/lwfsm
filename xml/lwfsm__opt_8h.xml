@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="lwfsm__opt_8h" kind="file" language="C++">
+    <compoundname>lwfsm_opt.h</compoundname>
+    <includes local="yes">lwfsm_opts.h</includes>
+    <includedby refid="lwfsm_8h" local="yes">/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm.h</includedby>
+    <incdepgraph>
+      <node id="17">
+        <label>/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm_opt.h</label>
+        <link refid="lwfsm__opt_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>lwfsm_opts.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="23">
+        <label>/__w/lwfsm/lwfsm/lwfsm/src/lwfsm/lwfsm_app_model2_template.c</label>
+        <link refid="lwfsm__app__model2__template_8c"/>
+      </node>
+      <node id="19">
+        <label>/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm_opt.h</label>
+        <link refid="lwfsm__opt_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm.h</label>
+        <link refid="lwfsm_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>/__w/lwfsm/lwfsm/lwfsm/src/lwfsm/lwfsm_app_model1_template.c</label>
+        <link refid="lwfsm__app__model1__template_8c"/>
+      </node>
+      <node id="21">
+        <label>/__w/lwfsm/lwfsm/lwfsm/src/lwfsm/lwfsm.c</label>
+        <link refid="lwfsm_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__LWFSM__OPT_1gaa7da043584ce3ffe631c9c03387f35ce" prot="public" static="no">
+        <name>LWFSM_USE_LOG</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>Enables <computeroutput>1</computeroutput> or disables <computeroutput>0</computeroutput> the logs. </para>        </briefdescription>
+        <detaileddescription>
+<para>It enables the logging mechanism (one log level only)use logs by default </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm_opt.h" line="61" column="9" bodyfile="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm_opt.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LWFSM__OPT_1ga43e377ecd0bdb57a584806926ca8eb2d" prot="public" static="no">
+        <name>LWFSM_USE_CONTEXT</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>Enables <computeroutput>1</computeroutput> or disables <computeroutput>0</computeroutput> the FSM context. </para>        </briefdescription>
+        <detaileddescription>
+<para>It enables the possibility to pass a context from one FSM state to anotheruse applicative context by default </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm_opt.h" line="70" column="9" bodyfile="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm_opt.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LWFSM__OPT_1gad2e0a921e7439210d365c80d8e738f38" prot="public" static="no">
+        <name>LWFSM_USE_PROGMOD2</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>Enables <computeroutput>1</computeroutput> or disables <computeroutput>0</computeroutput> the Programming Model 2. </para>        </briefdescription>
+        <detaileddescription>
+<para>It enables the possibility to have a single declaration of the FSM statesprogramming model 2 is available by default </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm_opt.h" line="79" column="9" bodyfile="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm_opt.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>LwFSM options. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2022<sp/>Frederic<sp/>RUELLE</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>obtaining<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>OF<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>LwFSM<sp/>-<sp/>Lightweight<sp/>FSM<sp/>manager.</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>Author:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Frederic<sp/>RUELLE<sp/>&lt;frederic.ruelle@free.fr&gt;</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/>Version:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v0.1.0</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LWFSM_HDR_OPT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LWFSM_HDR_OPT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Uncomment<sp/>to<sp/>ignore<sp/>user<sp/>options<sp/>(or<sp/>set<sp/>macro<sp/>in<sp/>compiler<sp/>flags)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>#define<sp/>LWFSM_IGNORE_USER_OPTS<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Include<sp/>application<sp/>options<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LWFSM_IGNORE_USER_OPTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;lwfsm_opts.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LWFSM_IGNORE_USER_OPTS<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__cplusplus<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor">#ifndef<sp/>LWFSM_USE_LOG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="group__LWFSM__OPT_1gaa7da043584ce3ffe631c9c03387f35ce" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LWFSM_USE_LOG<sp/>1<sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LWFSM_USE_LOG<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor">#ifndef<sp/>LWFSM_USE_CONTEXT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="group__LWFSM__OPT_1ga43e377ecd0bdb57a584806926ca8eb2d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LWFSM_USE_CONTEXT<sp/>1<sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LWFSM_USE_CONTEXT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="preprocessor">#ifndef<sp/>LWFSM_USE_PROGMOD2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="group__LWFSM__OPT_1gad2e0a921e7439210d365c80d8e738f38" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LWFSM_USE_PROGMOD2<sp/>1<sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LWFSM_USE_PROGMOD2<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__cplusplus<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LWFSM_HDR_OPT_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm_opt.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="group__LWFSM__LOG" kind="group">
+    <compoundname>LWFSM_LOG</compoundname>
+    <title>Logging service</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__LWFSM__LOG_1gabae58a6ef0111ffa5692f6a487f036f4" prot="public" static="no">
+        <name>LWFSM_LOG</name>
+        <param><defname>...</defname></param>
+        <briefdescription>
+<para>Logging service. </para>        </briefdescription>
+        <detaileddescription>
+<para>The default porting relies on the lib-C printf service. It is up to the project to port this service to the targeted hardware. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm_log.h" line="60" column="10" bodyfile="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm_log.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Default LOG service. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

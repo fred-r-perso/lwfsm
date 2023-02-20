@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="lwfsm_8c" kind="file" language="C++">
+    <compoundname>lwfsm.c</compoundname>
+    <includes refid="lwfsm_8h" local="yes">lwfsm.h</includes>
+    <incdepgraph>
+      <node id="28">
+        <label>stdint.h</label>
+      </node>
+      <node id="29">
+        <label>lwfsm_opt.h</label>
+        <link refid="lwfsm__opt_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>lwfsm.h</label>
+        <link refid="lwfsm_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>lwfsm_log.h</label>
+        <link refid="lwfsm__log_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>/__w/lwfsm/lwfsm/lwfsm/src/lwfsm/lwfsm.c</label>
+        <link refid="lwfsm_8c"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>lwfsm_opts.h</label>
+      </node>
+      <node id="32">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="lwfsm_8c_1a62e575b71e3257627e2244374db106a5" prot="public" static="no">
+        <name>LWFSM_C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/__w/lwfsm/lwfsm/lwfsm/src/lwfsm/lwfsm.c" line="34" column="9" bodyfile="/__w/lwfsm/lwfsm/lwfsm/src/lwfsm/lwfsm.c" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="lwfsm_8c_1a021b9a2d11d33b0aa250bb99c55f4f2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__LwFSM__Types_1gac5dfb37d24f02ace29c00c45af5553ec" kindref="member">lwfsm_status_t</ref></type>
+        <definition>lwfsm_status_t lwfsm_init_state_machine</definition>
+        <argsstring>(lwfsm_ctxt_t *fsm_ctxt, const lwfsm_table_row_t *const fsm_table, const uint32_t initial_state)</argsstring>
+        <name>lwfsm_init_state_machine</name>
+        <param>
+          <type><ref refid="structlwfsm__ctxt__t" kindref="compound">lwfsm_ctxt_t</ref> *</type>
+          <declname>fsm_ctxt</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structlwfsm__table__row__t" kindref="compound">lwfsm_table_row_t</ref> *const</type>
+          <declname>fsm_table</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>initial_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/__w/lwfsm/lwfsm/lwfsm/src/lwfsm/lwfsm.c" line="41" column="1" bodyfile="/__w/lwfsm/lwfsm/lwfsm/src/lwfsm/lwfsm.c" bodystart="41" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="lwfsm_8c_1a2fb7e914a6f79a34caaa7348f7c7ad50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__LwFSM__Types_1gac5dfb37d24f02ace29c00c45af5553ec" kindref="member">lwfsm_status_t</ref></type>
+        <definition>lwfsm_status_t lwfsm_run_state_machine</definition>
+        <argsstring>(lwfsm_ctxt_t *fsm_ctxt)</argsstring>
+        <name>lwfsm_run_state_machine</name>
+        <param>
+          <type><ref refid="structlwfsm__ctxt__t" kindref="compound">lwfsm_ctxt_t</ref> *</type>
+          <declname>fsm_ctxt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/__w/lwfsm/lwfsm/lwfsm/src/lwfsm/lwfsm.c" line="69" column="1" bodyfile="/__w/lwfsm/lwfsm/lwfsm/src/lwfsm/lwfsm.c" bodystart="69" bodyend="107"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>LwFSM FSM engine. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2022<sp/>Frederic<sp/>RUELLE</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>obtaining<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>OF<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>LwFSM<sp/>-<sp/>Lightweight<sp/>FSM<sp/>manager.</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>Author:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Frederic<sp/>RUELLE<sp/>&lt;frederic.ruelle@free.fr&gt;</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/>Version:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v0.1.0</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LWFSM_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="lwfsm_8h" kindref="compound">lwfsm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LWFSM_USE_LOG<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><ref refid="group__LwFSM__Types_1gac5dfb37d24f02ace29c00c45af5553ec" kindref="member">lwfsm_status_t</ref><sp/><ref refid="group__LwFSM__API__M1_1ga5d031ea56c1b3524b1ff6978f636fb5b" kindref="member">lwfsm_init_state_machine</ref>(<ref refid="structlwfsm__ctxt__t" kindref="compound">lwfsm_ctxt_t</ref><sp/>*<sp/>fsm_ctxt,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structlwfsm__table__row__t" kindref="compound">lwfsm_table_row_t</ref><sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>fsm_table,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<sp/>states_log_names,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>initial_state)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><ref refid="group__LwFSM__Types_1gac5dfb37d24f02ace29c00c45af5553ec" kindref="member">lwfsm_status_t</ref><sp/><ref refid="group__LwFSM__API__M1_1ga5d031ea56c1b3524b1ff6978f636fb5b" kindref="member">lwfsm_init_state_machine</ref>(<ref refid="structlwfsm__ctxt__t" kindref="compound">lwfsm_ctxt_t</ref><sp/>*<sp/>fsm_ctxt,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structlwfsm__table__row__t" kindref="compound">lwfsm_table_row_t</ref><sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>fsm_table,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>initial_state)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LWFSM_USE_LOG<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LWFSM_USE_LOG<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(NULL<sp/>==<sp/>fsm_ctxt)<sp/>||<sp/>(NULL<sp/>==<sp/>fsm_table)<sp/>||<sp/>(NULL<sp/>==<sp/>states_log_names)<sp/>)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(NULL<sp/>==<sp/>fsm_ctxt)<sp/>||<sp/>(NULL<sp/>==<sp/>fsm_table)<sp/>)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LWFSM_USE_LOG<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__LWFSM__LOG_1gabae58a6ef0111ffa5692f6a487f036f4" kindref="member">LWFSM_LOG</ref>(</highlight><highlight class="stringliteral">&quot;[ERROR]<sp/>LwFSM<sp/>-<sp/>NULL<sp/>pointer(s).\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__LwFSM__Types_1ggac5dfb37d24f02ace29c00c45af5553ecabdafd9ba79b33c3afdd8a644efebe8a6" kindref="member">LWFSM_ERROR</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>fsm_ctxt-&gt;<ref refid="structlwfsm__ctxt__t_1a56b2fcc9bfe0cf695a6742f0bb42ce55" kindref="member">cur_state</ref><sp/>=<sp/>initial_state;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>fsm_ctxt-&gt;<ref refid="structlwfsm__ctxt__t_1ab8c24172e983044f0972da709ac8fec4" kindref="member">fsm_table</ref><sp/>=<sp/>fsm_table;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LWFSM_USE_LOG<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>fsm_ctxt-&gt;<ref refid="structlwfsm__ctxt__t_1a61d5b6d225fd8e454dd1e9bb3a1d6fe2" kindref="member">log_names</ref><sp/>=<sp/>states_log_names;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LWFSM_USE_LOG<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__LWFSM__LOG_1gabae58a6ef0111ffa5692f6a487f036f4" kindref="member">LWFSM_LOG</ref>(</highlight><highlight class="stringliteral">&quot;[INFO]<sp/>LwFSM<sp/>-<sp/>init<sp/>success.\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__LwFSM__Types_1ggac5dfb37d24f02ace29c00c45af5553ecaad55026fd5428c45adb2b3072118c616" kindref="member">LWFSM_OK</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LWFSM_USE_CONTEXT<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><ref refid="group__LwFSM__Types_1gac5dfb37d24f02ace29c00c45af5553ec" kindref="member">lwfsm_status_t</ref><sp/><ref refid="group__LwFSM__API__M1_1gad54a06d0aa371d4a631a1fe056f8bd0e" kindref="member">lwfsm_run_state_machine</ref>(<ref refid="structlwfsm__ctxt__t" kindref="compound">lwfsm_ctxt_t</ref><sp/>*<sp/>fsm_ctxt,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>user_ctxt)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><ref refid="group__LwFSM__Types_1gac5dfb37d24f02ace29c00c45af5553ec" kindref="member">lwfsm_status_t</ref><sp/><ref refid="group__LwFSM__API__M1_1gad54a06d0aa371d4a631a1fe056f8bd0e" kindref="member">lwfsm_run_state_machine</ref>(<ref refid="structlwfsm__ctxt__t" kindref="compound">lwfsm_ctxt_t</ref><sp/>*<sp/>fsm_ctxt)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LWFSM_USE_CONTEXT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><ref refid="group__LwFSM__Types_1ga1f824da4c340448f2fab98a2a3d7111a" kindref="member">lwfsm_state_func_t</ref><sp/>state_func;<sp/></highlight><highlight class="comment">/*<sp/>next<sp/>FSM<sp/>state<sp/>function<sp/>to<sp/>be<sp/>called<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LWFSM_USE_LOG<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>cur_state_name;<sp/></highlight><highlight class="comment">/*<sp/>name<sp/>to<sp/>be<sp/>logged<sp/>for<sp/>the<sp/>current<sp/>state<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LWFSM_USE_LOG<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>FSM<sp/>engine<sp/>loop<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>---------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(fsm_ctxt-&gt;<ref refid="structlwfsm__ctxt__t_1a56b2fcc9bfe0cf695a6742f0bb42ce55" kindref="member">cur_state</ref><sp/>&lt;<sp/><ref refid="group__LwFSM__Macros_1ga715a6eaac42f18c17cdb876aa6ba603b" kindref="member">LWFSM_STOP_SUCCESS</ref>)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>current<sp/>FSM<sp/>state<sp/>C<sp/>function<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>state_func<sp/>=<sp/>fsm_ctxt-&gt;<ref refid="structlwfsm__ctxt__t_1ab8c24172e983044f0972da709ac8fec4" kindref="member">fsm_table</ref>[fsm_ctxt-&gt;<ref refid="structlwfsm__ctxt__t_1a56b2fcc9bfe0cf695a6742f0bb42ce55" kindref="member">cur_state</ref>].<ref refid="structlwfsm__table__row__t_1a0009298462d5a61e915ac3387d841a2a" kindref="member">state_function</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LWFSM_USE_LOG<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>cur_state_name<sp/>=<sp/>fsm_ctxt-&gt;<ref refid="structlwfsm__ctxt__t_1a61d5b6d225fd8e454dd1e9bb3a1d6fe2" kindref="member">log_names</ref>[fsm_ctxt-&gt;<ref refid="structlwfsm__ctxt__t_1a56b2fcc9bfe0cf695a6742f0bb42ce55" kindref="member">cur_state</ref>];</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__LWFSM__LOG_1gabae58a6ef0111ffa5692f6a487f036f4" kindref="member">LWFSM_LOG</ref>(</highlight><highlight class="stringliteral">&quot;[INFO]<sp/>LwFSM<sp/>-<sp/>entering<sp/>state:<sp/>%s\r\n&quot;</highlight><highlight class="normal">,<sp/>cur_state_name);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LWFSM_USE_LOG<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Run<sp/>the<sp/>state<sp/>function<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LWFSM_USE_CONTEXT<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>fsm_ctxt-&gt;<ref refid="structlwfsm__ctxt__t_1a56b2fcc9bfe0cf695a6742f0bb42ce55" kindref="member">cur_state</ref><sp/>=<sp/>state_func(user_ctxt);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>fsm_ctxt-&gt;<ref refid="structlwfsm__ctxt__t_1a56b2fcc9bfe0cf695a6742f0bb42ce55" kindref="member">cur_state</ref><sp/>=<sp/>state_func();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LWFSM_USE_CONTEXT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Manage<sp/>return<sp/>status<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>--------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fsm_ctxt-&gt;<ref refid="structlwfsm__ctxt__t_1a56b2fcc9bfe0cf695a6742f0bb42ce55" kindref="member">cur_state</ref><sp/>==<sp/><ref refid="group__LwFSM__Macros_1ga715a6eaac42f18c17cdb876aa6ba603b" kindref="member">LWFSM_STOP_SUCCESS</ref>)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__LWFSM__LOG_1gabae58a6ef0111ffa5692f6a487f036f4" kindref="member">LWFSM_LOG</ref>(</highlight><highlight class="stringliteral">&quot;[INFO]<sp/>LwFSM<sp/>-<sp/>FSM<sp/>engine<sp/>terminates<sp/>with<sp/>success.\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__LwFSM__Types_1ggac5dfb37d24f02ace29c00c45af5553ecaad55026fd5428c45adb2b3072118c616" kindref="member">LWFSM_OK</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__LWFSM__LOG_1gabae58a6ef0111ffa5692f6a487f036f4" kindref="member">LWFSM_LOG</ref>(</highlight><highlight class="stringliteral">&quot;[ERROR]<sp/>LwFSM<sp/>-<sp/>FSM<sp/>engine<sp/>terminates<sp/>with<sp/>an<sp/>error.\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__LwFSM__Types_1ggac5dfb37d24f02ace29c00c45af5553ecabdafd9ba79b33c3afdd8a644efebe8a6" kindref="member">LWFSM_ERROR</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="preprocessor">#if<sp/>LWFSM_USE_PROGMOD2<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LWFSM_USE_LOG<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><ref refid="group__LwFSM__Types_1gac5dfb37d24f02ace29c00c45af5553ec" kindref="member">lwfsm_status_t</ref><sp/><ref refid="group__LwFSM__API__M2_1gaa16284f1422ff96d7bc550deb7ef97ce" kindref="member">lwfsm_init_state_machineM2</ref>(<ref refid="structlwfsm__ctxt2__t" kindref="compound">lwfsm_ctxt2_t</ref><sp/>*fsm_ctxt,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structlwfsm__table__row__t" kindref="compound">lwfsm_table_row_t</ref><sp/>*fsm_table,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>*states_log_names,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>initial_state,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>nb_states)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><ref refid="group__LwFSM__Types_1gac5dfb37d24f02ace29c00c45af5553ec" kindref="member">lwfsm_status_t</ref><sp/><ref refid="group__LwFSM__API__M2_1gaa16284f1422ff96d7bc550deb7ef97ce" kindref="member">lwfsm_init_state_machineM2</ref>(<ref refid="structlwfsm__ctxt2__t" kindref="compound">lwfsm_ctxt2_t</ref><sp/>*<sp/>fsm_ctxt,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structlwfsm__table__row__t" kindref="compound">lwfsm_table_row_t</ref><sp/>*fsm_table,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>initial_state,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>nb_states)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LWFSM_USE_LOG<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LWFSM_USE_LOG<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(NULL<sp/>==<sp/>fsm_ctxt)<sp/>||<sp/>(NULL<sp/>==<sp/>fsm_table)<sp/>||<sp/>(NULL<sp/>==<sp/>states_log_names)<sp/>)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(NULL<sp/>==<sp/>fsm_ctxt)<sp/>||<sp/>(NULL<sp/>==<sp/>fsm_table)<sp/>)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LWFSM_USE_LOG<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__LWFSM__LOG_1gabae58a6ef0111ffa5692f6a487f036f4" kindref="member">LWFSM_LOG</ref>(</highlight><highlight class="stringliteral">&quot;[ERROR]<sp/>LwFSM<sp/>-<sp/>NULL<sp/>pointer(s).\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__LwFSM__Types_1ggac5dfb37d24f02ace29c00c45af5553ecabdafd9ba79b33c3afdd8a644efebe8a6" kindref="member">LWFSM_ERROR</ref>;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>fsm_ctxt-&gt;<ref refid="structlwfsm__ctxt2__t_1a56b2fcc9bfe0cf695a6742f0bb42ce55" kindref="member">cur_state</ref><sp/>=<sp/>initial_state;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>fsm_ctxt-&gt;<ref refid="structlwfsm__ctxt2__t_1ab8c24172e983044f0972da709ac8fec4" kindref="member">fsm_table</ref><sp/>=<sp/>fsm_table;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LWFSM_USE_LOG<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>fsm_ctxt-&gt;<ref refid="structlwfsm__ctxt2__t_1a61d5b6d225fd8e454dd1e9bb3a1d6fe2" kindref="member">log_names</ref><sp/>=<sp/>states_log_names;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LWFSM_USE_LOG<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>fsm_ctxt-&gt;<ref refid="structlwfsm__ctxt2__t_1a05ffe2cf457de5fcb95d56ec2a9fab85" kindref="member">nb_states</ref><sp/>=<sp/>nb_states;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__LWFSM__LOG_1gabae58a6ef0111ffa5692f6a487f036f4" kindref="member">LWFSM_LOG</ref>(</highlight><highlight class="stringliteral">&quot;[INFO]<sp/>LwFSM<sp/>-<sp/>init<sp/>success.\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__LwFSM__Types_1ggac5dfb37d24f02ace29c00c45af5553ecaad55026fd5428c45adb2b3072118c616" kindref="member">LWFSM_OK</ref>;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LWFSM_USE_CONTEXT<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><ref refid="group__LwFSM__Types_1gac5dfb37d24f02ace29c00c45af5553ec" kindref="member">lwfsm_status_t</ref><sp/><ref refid="group__LwFSM__API__M2_1ga711182eae8128494523ed4865433e2d9" kindref="member">lwfsm_run_state_machineM2</ref>(<ref refid="structlwfsm__ctxt2__t" kindref="compound">lwfsm_ctxt2_t</ref><sp/>*<sp/>fsm_ctxt,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>user_ctxt)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><ref refid="group__LwFSM__Types_1gac5dfb37d24f02ace29c00c45af5553ec" kindref="member">lwfsm_status_t</ref><sp/><ref refid="group__LwFSM__API__M2_1ga711182eae8128494523ed4865433e2d9" kindref="member">lwfsm_run_state_machineM2</ref>(<ref refid="structlwfsm__ctxt2__t" kindref="compound">lwfsm_ctxt2_t</ref><sp/>*<sp/>fsm_ctxt)</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LWFSM_USE_CONTEXT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><ref refid="group__LwFSM__Types_1ga1f824da4c340448f2fab98a2a3d7111a" kindref="member">lwfsm_state_func_t</ref><sp/>state_func;<sp/></highlight><highlight class="comment">/*<sp/>next<sp/>FSM<sp/>state<sp/>function<sp/>to<sp/>be<sp/>called<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LWFSM_USE_LOG<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>cur_state_name;<sp/></highlight><highlight class="comment">/*<sp/>name<sp/>to<sp/>be<sp/>logged<sp/>for<sp/>the<sp/>current<sp/>state<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LWFSM_USE_LOG<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>FSM<sp/>engine<sp/>loop<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>---------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(fsm_ctxt-&gt;<ref refid="structlwfsm__ctxt2__t_1a56b2fcc9bfe0cf695a6742f0bb42ce55" kindref="member">cur_state</ref><sp/>&lt;<sp/>fsm_ctxt-&gt;<ref refid="structlwfsm__ctxt2__t_1a05ffe2cf457de5fcb95d56ec2a9fab85" kindref="member">nb_states</ref>)</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>current<sp/>FSM<sp/>state<sp/>C<sp/>function<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>state_func<sp/>=<sp/>fsm_ctxt-&gt;<ref refid="structlwfsm__ctxt2__t_1ab8c24172e983044f0972da709ac8fec4" kindref="member">fsm_table</ref>[fsm_ctxt-&gt;<ref refid="structlwfsm__ctxt2__t_1a56b2fcc9bfe0cf695a6742f0bb42ce55" kindref="member">cur_state</ref>].<ref refid="structlwfsm__table__row__t_1a0009298462d5a61e915ac3387d841a2a" kindref="member">state_function</ref>;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LWFSM_USE_LOG<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>cur_state_name<sp/>=<sp/>fsm_ctxt-&gt;<ref refid="structlwfsm__ctxt2__t_1a61d5b6d225fd8e454dd1e9bb3a1d6fe2" kindref="member">log_names</ref>[fsm_ctxt-&gt;<ref refid="structlwfsm__ctxt2__t_1a56b2fcc9bfe0cf695a6742f0bb42ce55" kindref="member">cur_state</ref>];</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__LWFSM__LOG_1gabae58a6ef0111ffa5692f6a487f036f4" kindref="member">LWFSM_LOG</ref>(</highlight><highlight class="stringliteral">&quot;[INFO]<sp/>LwFSM<sp/>-<sp/>entering<sp/>state:<sp/>%s\r\n&quot;</highlight><highlight class="normal">,<sp/>cur_state_name);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LWFSM_USE_LOG<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Run<sp/>the<sp/>state<sp/>function<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LWFSM_USE_CONTEXT<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>fsm_ctxt-&gt;<ref refid="structlwfsm__ctxt2__t_1a56b2fcc9bfe0cf695a6742f0bb42ce55" kindref="member">cur_state</ref><sp/>=<sp/>state_func(user_ctxt);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>fsm_ctxt-&gt;<ref refid="structlwfsm__ctxt2__t_1a56b2fcc9bfe0cf695a6742f0bb42ce55" kindref="member">cur_state</ref><sp/>=<sp/>state_func();</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LWFSM_USE_CONTEXT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Manage<sp/>return<sp/>status<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>--------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fsm_ctxt-&gt;<ref refid="structlwfsm__ctxt2__t_1a56b2fcc9bfe0cf695a6742f0bb42ce55" kindref="member">cur_state</ref><sp/>==<sp/><ref refid="group__LwFSM__Macros_1ga715a6eaac42f18c17cdb876aa6ba603b" kindref="member">LWFSM_STOP_SUCCESS</ref>)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__LWFSM__LOG_1gabae58a6ef0111ffa5692f6a487f036f4" kindref="member">LWFSM_LOG</ref>(</highlight><highlight class="stringliteral">&quot;[INFO]<sp/>LwFSM<sp/>-<sp/>FSM<sp/>engine<sp/>terminates<sp/>with<sp/>success.\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__LwFSM__Types_1ggac5dfb37d24f02ace29c00c45af5553ecaad55026fd5428c45adb2b3072118c616" kindref="member">LWFSM_OK</ref>;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__LWFSM__LOG_1gabae58a6ef0111ffa5692f6a487f036f4" kindref="member">LWFSM_LOG</ref>(</highlight><highlight class="stringliteral">&quot;[ERROR]<sp/>LwFSM<sp/>-<sp/>FSM<sp/>engine<sp/>terminates<sp/>with<sp/>an<sp/>error.\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__LwFSM__Types_1ggac5dfb37d24f02ace29c00c45af5553ecabdafd9ba79b33c3afdd8a644efebe8a6" kindref="member">LWFSM_ERROR</ref>;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LWFSM_USE_PROGMOD2<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/__w/lwfsm/lwfsm/lwfsm/src/lwfsm/lwfsm.c"/>
+  </compounddef>
+</doxygen>
