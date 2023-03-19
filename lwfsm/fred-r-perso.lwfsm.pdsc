@@ -30,12 +30,12 @@
                 <file category="include" name="src/include/lwfsm/"/>
                 <file category="header" name="src/include/lwfsm/lwfsm.h"/>
                 <file category="source" name="src/lwfsm/lwfsm.c"/>
-                <file category="header" attr="config" name="src/include/lwfsm/lwfsm_opt.h"/>
-                <file category="header" attr="template"  name="src/include/lwfsm/lwfsm_opts_template.h"/>
-                <file category="source" attr="template" name="src/lwfsm/lwfsm_app_model1_template.c"/>
-                <file category="source" attr="template" name="src/lwfsm/lwfsm_app_model2_template.c"/>
-                <file category="other" attr="template" name="src/lwfsm/lwfsm_states_template.fsm"/>
-                <file category="header" attr="template" name="src/lwfsm/lwfsm_app_template.h"/>
+                <file category="header" attr="config" name="src/include/lwfsm/lwfsm_opt.h" version="0.1.0"/>
+                <file category="header" attr="template"  name="src/include/lwfsm/lwfsm_opts_template.h" select="option file"/>
+                <file category="source" attr="template" name="src/lwfsm/lwfsm_app_model1_template.c" select="Applicative FSM implementation - programming model M1"/>
+                <file category="source" attr="template" name="src/lwfsm/lwfsm_app_model2_template.c" select="Applicative FSM implementation - programming model M2"/>
+                <file category="other" attr="template" name="src/lwfsm/lwfsm_states_template.fsm" select="FSM states declaration for programming model M2"/>
+                <file category="header" attr="template" name="src/lwfsm/lwfsm_app_template.h" select="Entry point of the applicative FSM"/>
             </files>
         </component>
     </components>
