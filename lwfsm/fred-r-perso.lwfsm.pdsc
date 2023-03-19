@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<package schemaVersion="1.6.3" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
+    <vendor>fred-r-perso</vendor>
+    <name>lwfsm</name>
+    <description>LWFSM : Lightweight FSM management system for embedded systems</description>
+    <url>https://github.com/fred-r-perso/lwfsm/</url>
+    <license>LICENSE</license>
+    <supportContact>fredr2010@gmail.com</supportContact>
+    <releases>
+        <release date="2023-02-20" version="0.1.0">Initial Release</release>
+    </releases>
+    <keywords>
+        <keyword>Finite State Machine</keyword>
+    </keywords>
+    <taxonomy>
+        <description Cclass="Utility">Utility</description>
+    </taxonomy>
+    <requirements>
+        <languages>
+            <language name="C" version="11"/>
+        </languages>
+    </requirements>
+    <components>
+        <component Cclass="Utility" Cgroup="LW_UTILITY" Csub="FSM" Cversion="0.1.0" maxInstances="1">
+            <description>LwFSM is a Finite State Machine (FSM) engine and its objective is to:
+- be lightweight,
+- be suitable for embedded systems,
+- offer an abstract syntax in the FSM declaration.</description>
+            <files>
+                <file category="include" name="src/include/lwfsm/"/>
+                <file category="header" name="src/include/lwfsm/lwfsm.h"/>
+                <file category="source" name="src/lwfsm/lwfsm.c"/>
+                <file category="header" attr="config" name="src/include/lwfsm/lwfsm_opt.h"/>
+                <file category="header" attr="template"  name="src/include/lwfsm/lwfsm_opts_template.h"/>
+                <file category="source" attr="template" name="src/lwfsm/lwfsm_app_model1_template.c"/>
+                <file category="source" attr="template" name="src/lwfsm/lwfsm_app_model2_template.c"/>
+                <file category="other" attr="template" name="src/lwfsm/lwfsm_states_template.fsm"/>
+                <file category="header" attr="template" name="src/lwfsm/lwfsm_app_template.h"/>
+            </files>
+        </component>
+    </components>
+</package>

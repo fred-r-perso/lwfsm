@@ -16,3 +16,8 @@ Build finished. The HTML pages are in _build/html.
 This is handled via 'build_docs.sh'.
 
 The 'gh-pages' site is updated when a commit is pushed on 'develop' or 'master'.
+
+## Required tools
+
+- [Doxygen](https://sourceforge.net/projects/doxygen/) 1.8.x to build the documentation
+- [Graphviz](https://graphviz.org/download/) to create graphs in the documentation
