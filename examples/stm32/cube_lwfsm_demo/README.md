@@ -1,6 +1,6 @@
-# __LWFSM : *lwfsm_demo*__
+# __LWFSM : *cube_lwfsm_demo*__
 
-This project runs on STM32U5 and illustrates how one can use the LwFSM code.
+This project runs on STM32U5 in the [STM32Cube ecosystem](https://www.st.com/content/st_com/en/stm32-mcu-developer-zone.html) and illustrates how one can use the LwFSM code.
 
 ## What is it doing ?
 
@@ -19,8 +19,8 @@ This logic is run two times:
 ## What does it contain ?
 
 This example project contains:
-- a STM32CubeMX project to configure the system (`lwfsm_demo.ioc`),
-- a STM32CubeIDE project to build the program (`.project`),
+- a [STM32CubeMX](https://www.st.com/content/st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-configurators-and-code-generators/stm32cubemx.html) project to configure the system (`lwfsm_demo.ioc`),
+- a [STM32CubeIDE](https://www.st.com/content/st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-ides/stm32cubeide.html) project to build the program (`.project`),
 - the applicative code illustrating how to use LwFSM is located in the `App` folder.
 
 ## How to use ?
