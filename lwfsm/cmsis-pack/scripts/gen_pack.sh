@@ -20,14 +20,14 @@ case $OS in
     if [ -z ${CMSIS_PACK_ROOT+x} ] ; then
       CMSIS_PACK_ROOT="/home/$USER/.arm/Packs"
     fi
-    CMSIS_TOOLSDIR="$(ls -drv ${CMSIS_PACK_ROOT}/ARM/CMSIS/* | head -1)/CMSIS/Utilities/Linux64"
+    # CMSIS_TOOLSDIR="$(ls -drv ${CMSIS_PACK_ROOT}/ARM/CMSIS/* | head -1)/CMSIS/Utilities/Linux64"
     ;;
   'WindowsNT'|MINGW*|CYGWIN*)
     if [ -z ${CMSIS_PACK_ROOT+x} ] ; then
       CMSIS_PACK_ROOT="$LOCALAPPDATA/Arm/Packs"
     fi
     CMSIS_PACK_ROOT="/$(echo ${CMSIS_PACK_ROOT} | sed -e 's/\\/\//g' -e 's/://g' -e 's/\"//g')"
-    CMSIS_TOOLSDIR="$(ls -drv ${CMSIS_PACK_ROOT}/ARM/CMSIS/* | head -1)/CMSIS/Utilities/Win32"
+    # CMSIS_TOOLSDIR="$(ls -drv ${CMSIS_PACK_ROOT}/ARM/CMSIS/* | head -1)/CMSIS/Utilities/Win32"
     ;;
   'Darwin')
     echo "Error: CMSIS Tools not available for Mac at present."
@@ -39,17 +39,17 @@ case $OS in
     ;;
 esac
 
-PATH_TO_ADD="$CMSIS_TOOLSDIR"
+# PATH_TO_ADD="$CMSIS_TOOLSDIR"
 
-[[ ":$PATH:" != *":$PATH_TO_ADD}:"* ]] && PATH="${PATH}:${PATH_TO_ADD}"
-echo $PATH_TO_ADD appended to PATH
-echo " "
+# [[ ":$PATH:" != *":$PATH_TO_ADD}:"* ]] && PATH="${PATH}:${PATH_TO_ADD}"
+# echo $PATH_TO_ADD appended to PATH
+# echo " "
 
 # Pack warehouse directory - destination
-PACK_WAREHOUSE=./pack
+PACK_WAREHOUSE=cmsis-pack/pack
 
 # Temporary pack build directory
-PACK_BUILD=./cmsis-pack/.build
+PACK_BUILD=cmsis-pack/.build
 
 # Specify directory names to be added to pack base directory
 PACK_DIRS="

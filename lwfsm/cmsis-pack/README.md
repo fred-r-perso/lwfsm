@@ -10,7 +10,7 @@ To build the pack need the following software:
   - Python v3.6 or later
   - [7-ZIP](https://7-zip.org/) to create the pack file
   - CMSIS Pack installed in CMSIS_PACK_ROOT (for [PackChk](https://www.keil.com/pack/doc/CMSIS_Dev/Pack/html/packChk.html) utility)
-  - [xmllint](https://gitlab.gnome.org/GNOME/libxml2) in path (XML schema validation; available only for Linux)
+  - [xmllint](https://gitlab.gnome.org/GNOME/libxml2) in path (XML schema validation; available only for Linux: *libxml2-utils*)
 
 ## What does it contain ?
 
@@ -26,10 +26,11 @@ The XML schema is available in the `resources/` folder.
 Please note that this tool requires folders and cmsis-packs in your local environment.
 
 ### Environment variables
-For instance, on a Linux machine, it expects:
+[OPTIONAL] For instance, on a Linux machine, it expects:
 ```
 CMSIS_PACK_ROOT="/home/$USER/.arm/Packs"
 ```
+[MANDATORY] You mst have the PackChk tool in your PATH.  
 You can call on Linux:
 ```
 ./scripts/set_vars.sh
@@ -43,6 +44,15 @@ You can call on Linux:
 
 This will install the required OpenCMSIS tool: `packchk`.
 
+[OPTIONAL] You can create your CMSIS_PACK_ROOT folder like this:
+```
+./scripts/set_vars.sh
+mkdir /home/$USER/.arm/
+mkdir /home/$USER/.arm/Packs
+cd /home/$USER/.arm/Packs
+cpackget -v init --pack-root . https://www.keil.com/pack/index.pidx
+```
+
 ### Generate the pack
 
 Make sure you have updated the .pdsc file.
@@ -52,4 +62,13 @@ Work from the upper level folder: `lwfsm/lwfsm/`
 Then:
 ```
 ./cmsis-pack/scripts/gen_pack.sh
+```
+
+### Install the pack
+
+Work from the upper level folder: `lwfsm/lwfsm/`
+
+Then:
+```
+cpackget add ./cmsis-pack/pack/fred-r-perso.lwfsm.0.1.0.pack
 ```
