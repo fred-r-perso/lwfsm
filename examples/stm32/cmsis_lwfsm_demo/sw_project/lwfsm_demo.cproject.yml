@@ -30,7 +30,7 @@ project:
   groups:
     - group: Documentation
       files:
-        - file: ./README.md
+        - file: ../README.md
 
     - group: STM32 Core
       files:

@@ -21,6 +21,6 @@ solution:
   projects:
     - project: ./sw_project/lwfsm_demo.cproject.yml
 
- # output-dirs:
- #   intdir: build/$BuildType$
- #   outdir: build/$BuildType$
+  output-dirs:
+    intdir: build/$BuildType$
+    outdir: build/$BuildType$
