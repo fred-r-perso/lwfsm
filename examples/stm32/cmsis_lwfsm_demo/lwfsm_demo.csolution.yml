@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/schemas/projmgr/1.5.0/tools/projmgr/schemas/csolution.schema.json
+solution:
+  
+  target-types:
+    - type: B-U585I-IOT02A
+      device: STM32U585AIIxQ
+      processor:
+        trustzone: off
+  
+  build-types:
+    - type: debug
+      compiler: GCC
+      optimize: none
+      debug: on
+
+    - type: release
+      compiler: GCC
+      optimize: balanced
+      debug: off
+
+  projects:
+    - project: ./sw_project/lwfsm_demo.cproject.yml
+
+ # output-dirs:
+ #   intdir: build/$BuildType$
+ #   outdir: build/$BuildType$

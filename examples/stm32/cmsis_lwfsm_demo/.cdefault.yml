@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/schemas/projmgr/1.4.0/tools/projmgr/schemas/cdefault.schema.json
+
+default:
+  compiler: GCC
+
+  misc:
+    - for-compiler: GCC
+      C:
+        - -std=gnu11
+        - -fdata-sections
+        - -ffunction-sections
+        - -Wall
+        - -fstack-usage
+      Link:
+          - --specs=nosys.specs
+          - -Wl,-Map=$Project$.$BuildType$+$TargetType$.map
+          - -Wl,--gc-sections
+          - --specs=nano.specs
+          - -Wl,--start-group -lc -lm -Wl,--end-group
+          - --static

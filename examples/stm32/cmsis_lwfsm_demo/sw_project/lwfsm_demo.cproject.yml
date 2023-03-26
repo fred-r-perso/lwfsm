@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/schemas/projmgr/1.5.0/tools/projmgr/schemas/cproject.schema.json
+
+project:
+
+  # it's recommended to list the packs that are used by the solution,
+  # otherwise all installed packs are used to discover components
+  packs:
+    - pack: ARM::CMSIS
+    - pack: Keil::STM32U5xx_DFP
+    - pack: fred-r-perso::lwfsm
+
+  components:
+    # Platform
+    - component: ARM::CMSIS:CORE
+    - component: Keil::Device:Startup
+    # Drivers
+    - component: Device:STM32Cube HAL:GPIO
+    - component: Device:STM32Cube HAL:EXTI
+    - component: Device:STM32Cube HAL:UART
+    - component: Device:STM32Cube HAL:PWR
+    - component: Device:STM32Cube HAL:DMA
+    - component: Device:STM32Cube HAL:RCC
+    - component: Device:STM32Cube HAL:Flash
+    - component: Device:STM32Cube HAL:Common
+    - component: Device:STM32Cube HAL:Cortex
+    - component: Device:STM32Cube Framework
+    # Applicative library
+    - component: Utility:LW_UTILITY:FSM
+
+  groups:
+    - group: Documentation
+      files:
+        - file: ./README.md
+
+    - group: STM32 Core
+      files:
+        - file: ./Core/Src/main.c
+        - file: ./Core/Src/printf_port.c
+        - file: ./Core/Src/stm32u5xx_hal_msp.c
+        - file: ./Core/Src/stm32u5xx_it.c
+        - file: ./Core/Src/syscalls.c
+        - file: ./Core/Src/sysmem.c
+        - file: ./Core/Src/system_stm32u5xx.c
+        - file: ./Core/Src/usart.c
+
+    - group: Demo Application
+      files:
+        - file: ./App/lwfsm_app.c
+        - file: ./App/lwfsm_app_model2.c
+
+  output:
+    - type: elf
+      file: $Project$.$BuildType$+$TargetType$.axf
