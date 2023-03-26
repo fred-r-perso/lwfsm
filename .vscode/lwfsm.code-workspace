@@ -6,7 +6,7 @@
 	],
 	"settings": {
 		"files.associations": {
-			"*.fsm": "c"
+			"*.fsm": "c"			
 		}
 	}
 }

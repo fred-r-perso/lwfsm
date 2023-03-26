@@ -66,6 +66,13 @@ cpackget add ../../../lwfsm/cmsis-pack/pack/fred-r-perso.lwfsm.0.1.0.pack
   fredr2010@penguin:~/gh/lwfsm/examples/stm32/cmsis_lwfsm_demo$ cbuild lwfsm_demo.csolution.yml --packs --configuration .debug+B-U585I-IOT02A
   ```
 
+  - In case of issues with the RTE folder:
+  ```
+  fredr2010@penguin:~/gh/lwfsm/examples/stm32/cmsis_lwfsm_demo$ csolution convert -s lwfsm_demo.csolution.yml 
+  fredr2010@penguin:~/gh/lwfsm/examples/stm32/cmsis_lwfsm_demo$ cbuildgen cmake --update-rte ./sw_project/lwfsm_demo.debug+B-U585I-IOT02A.cprj
+  ```
+
+
 - connect the [b-u585i-iot02a](https://www.st.com/en/evaluation-tools/b-u585i-iot02a.html) board to your laptop over USB
 - Flash the executable in the [b-u585i-iot02a](https://www.st.com/en/evaluation-tools/b-u585i-iot02a.html)
 - Start a terminal emulator like [teraterm](https://ttssh2.osdn.jp/index.html.en) on your PC
