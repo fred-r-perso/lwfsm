@@ -31,6 +31,18 @@ This example project contains:
 ## Pre-requisites
 
 - run `scripts/set_vars.sh`
+- tune the GCC configuration for CMake.
+  In `/home/$USER/.config/Code/User/globalStorage/ms-vscode.vscode-embedded-tools/vcpkg/root/downloads/artifacts/vcpkg-artifacts-cmsis/tools.open.cmsis.pack.ctools/1.5.0/etc/GCC.10.3.1.cmake`  
+  Do the following change:
+```
+############### EDIT BELOW ###############
+# Set base directory of toolchain
+# set(TOOLCHAIN_ROOT "/home/runner/gcc-arm-none-eabi-10.3-2021.10/bin")
+set(TOOLCHAIN_ROOT "/home/fredr2010/.config/Code/User/globalStorage/ms-vscode.vscode-embedded-tools/vcpkg/root/downloads/artifacts/vcpkg-ce-default/compilers.arm.none.eabi.gcc/10.3.1-2021.10/bin"
+# Prevent CMake from testing the toolchain
+set(CMAKE_C_COMPILER_FORCED   1)
+set(CMAKE_CXX_COMPILER_FORCED 1)
+```
 - install the required pack(s): 
 ```
 cpackget add https://keil.com/pack/ARM.CMSIS.5.9.0.pack
