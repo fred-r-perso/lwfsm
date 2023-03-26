@@ -55,3 +55,5 @@ project:
   output:
     - type: elf
       file: $Project$.$BuildType$+$TargetType$.axf
+    - type: bin
+      file: $Project$.$BuildType$+$TargetType$.bin

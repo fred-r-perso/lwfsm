@@ -60,10 +60,17 @@ cpackget add ../../../lwfsm/cmsis-pack/pack/fred-r-perso.lwfsm.0.1.0.pack
 
 ## How to use ?
 
-### With VSCode and the Keil Studio Pack extension
+### Build with VSCode and the Keil Studio Pack extension
 - Open the Keil Studio Pack extension
+- Select:
+  - Active Solution: examples/stm32/cmsis_lwfsm_demo/lwfsm_demo
+  - Target Type: B-U585I-IOT02A
+  - Build Type: debug
+  - Project: lwfs_demo
+- See [how to configure a build task](https://github.com/ARM-software/vscode-cmsis-csolution#configure-a-build-task) or use the default one we provide
+- Click on "Build"
 
-### With CMSIS-Toolbox command line interface
+### Build with CMSIS-Toolbox command line interface
 
 - Build the project
   - Use the `cbuild` command from CMSIS-Toolbox to generate and build one or all configurations of the solution
@@ -88,9 +95,15 @@ cpackget add ../../../lwfsm/cmsis-pack/pack/fred-r-perso.lwfsm.0.1.0.pack
   fredr2010@penguin:~/gh/lwfsm/examples/stm32/cmsis_lwfsm_demo$ cbuildgen cmake --update-rte ./sw_project/lwfsm_demo.debug+B-U585I-IOT02A.cprj
   ```
 
+### Run the use-case out of VSCode
 
 - connect the [b-u585i-iot02a](https://www.st.com/en/evaluation-tools/b-u585i-iot02a.html) board to your laptop over USB
 - Flash the executable in the [b-u585i-iot02a](https://www.st.com/en/evaluation-tools/b-u585i-iot02a.html)
+  - use `examples/stm32/cmsis_lwfsm_demo/sw_project/out/lwfsm_demo/debug/B-U585I-IOT02A/lwfsm_demo.debug+B-U585I-IOT02A.bin`
+  - copy it via mass storage in the board
+  ```
+ fredr2010@penguin:~/gh/lwfsm$ cp examples/stm32/cmsis_lwfsm_demo/sw_project/out/lwfsm_demo/debug/B-U585I-IOT02A/lwfsm_demo.debug+B-U585I-IOT02A.bin /mnt/chromeos/removable/DIS_U585AI/
+  ```
 - Start a terminal emulator like [teraterm](https://ttssh2.osdn.jp/index.html.en) on your PC
 - Configure the serial link:
   - Speed: 115200
@@ -100,6 +113,10 @@ cpackget add ../../../lwfsm/cmsis-pack/pack/fred-r-perso.lwfsm.0.1.0.pack
   - Flow control : none
 - Press the RESET-BUTTON (black button) on the board
 - Observe the logs in the console and interact with the system with the USER-BUTTON (blue button)
+
+### Run the use-case from VSCode
+
+> TODO
 
 ## Facing issues ?
 
