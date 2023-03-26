@@ -102,8 +102,9 @@ cpackget add ../../../lwfsm/cmsis-pack/pack/fred-r-perso.lwfsm.0.1.0.pack
   - use `examples/stm32/cmsis_lwfsm_demo/sw_project/out/lwfsm_demo/debug/B-U585I-IOT02A/lwfsm_demo.debug+B-U585I-IOT02A.bin`
   - copy it via mass storage in the board
   ```
- fredr2010@penguin:~/gh/lwfsm$ cp examples/stm32/cmsis_lwfsm_demo/sw_project/out/lwfsm_demo/debug/B-U585I-IOT02A/lwfsm_demo.debug+B-U585I-IOT02A.bin /mnt/chromeos/removable/DIS_U585AI/
+  fredr2010@penguin:~/gh/lwfsm$ cp examples/stm32/cmsis_lwfsm_demo/sw_project/out/lwfsm_demo/debug/B-U585I-IOT02A/lwfsm_demo.debug+B-U585I-IOT02A.bin /mnt/chromeos/removable/DIS_U585AI/
   ```
+
 - Start a terminal emulator like [teraterm](https://ttssh2.osdn.jp/index.html.en) on your PC
 - Configure the serial link:
   - Speed: 115200
