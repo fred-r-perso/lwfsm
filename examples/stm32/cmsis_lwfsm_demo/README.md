@@ -73,6 +73,10 @@ cpackget add ../../../lwfsm/cmsis-pack/pack/fred-r-perso.lwfsm.0.1.0.pack
   .debug+B-U585I-IOT02A
   .release+B-U585I-IOT02A
   ```
+  - You can do a clean-up:
+  ```
+  cbuild lwfsm_demo.csolution.yml --clean
+  ```
   - Build the debug configuration and install the missing CMSIS packs if any:
   ```
   fredr2010@penguin:~/gh/lwfsm/examples/stm32/cmsis_lwfsm_demo$ cbuild lwfsm_demo.csolution.yml --packs --configuration .debug+B-U585I-IOT02A

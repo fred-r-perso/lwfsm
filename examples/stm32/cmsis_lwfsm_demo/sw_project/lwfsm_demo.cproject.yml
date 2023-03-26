@@ -27,6 +27,10 @@ project:
     # Applicative library
     - component: Utility:LW_UTILITY:FSM
 
+  add-path:
+    - ./Core/Inc
+    - ./App
+
   groups:
     - group: Documentation
       files:
@@ -35,12 +39,12 @@ project:
     - group: STM32 Core
       files:
         - file: ./Core/Src/main.c
+        - file: ./Core/Src/gpio.c
         - file: ./Core/Src/printf_port.c
         - file: ./Core/Src/stm32u5xx_hal_msp.c
         - file: ./Core/Src/stm32u5xx_it.c
         - file: ./Core/Src/syscalls.c
         - file: ./Core/Src/sysmem.c
-        - file: ./Core/Src/system_stm32u5xx.c
         - file: ./Core/Src/usart.c
 
     - group: Demo Application

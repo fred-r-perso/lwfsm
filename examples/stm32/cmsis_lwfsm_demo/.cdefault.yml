@@ -15,6 +15,5 @@ default:
           - --specs=nosys.specs
           - -Wl,-Map=$Project$.$BuildType$+$TargetType$.map
           - -Wl,--gc-sections
-          - --specs=nano.specs
           - -Wl,--start-group -lc -lm -Wl,--end-group
           - --static

@@ -16,12 +16,31 @@
     </release>
   </releases>
   <components>
-    <component generator="STM32CubeMX" Cvendor="Keil" Cclass="Device" Cgroup="STM32Cube Framework" Csub="STM32CubeMX" Cversion="1.0.0" condition="STCubeMX">
+    <component generator="STM32CubeMX"    Cclass="Device" Cgroup="STM32Cube Framework" Csub="STM32CubeMX" Cversion="2.0.0" Capiversion="1.1.0" condition="STM32U5 noTZ">
       <description>Configuration via STM32CubeMX</description>
       <RTE_Components_h>
         #define RTE_DEVICE_FRAMEWORK_CUBE_MX
       </RTE_Components_h>
       <files>
+        <file category="doc"     name="MDK/CubeMX/Documentation/cubemx.html"/>
+      </files>
+    </component>
+    <component generator="STM32CubeMX_S"  Cclass="Device" Cgroup="STM32Cube Framework" Csub="STM32CubeMX" Cversion="2.0.0" Capiversion="1.1.0" condition="STM32U5 isSecure">
+      <description>Configuration via STM32CubeMX</description>
+      <RTE_Components_h>
+        #define RTE_DEVICE_FRAMEWORK_CUBE_MX
+      </RTE_Components_h>
+      <files>
+        <file category="doc"     name="MDK/CubeMX/Documentation/cubemx.html"/>
+      </files>
+    </component>
+    <component generator="STM32CubeMX_NS" Cclass="Device" Cgroup="STM32Cube Framework" Csub="STM32CubeMX" Cversion="2.0.0" Capiversion="1.1.0" condition="STM32U5 isNonSecure">
+      <description>Configuration via STM32CubeMX</description>
+      <RTE_Components_h>
+        #define RTE_DEVICE_FRAMEWORK_CUBE_MX
+      </RTE_Components_h>
+      <files>
+        <file category="doc"     name="MDK/CubeMX/Documentation/cubemx.html"/>
       </files>
     </component>
   </components>
