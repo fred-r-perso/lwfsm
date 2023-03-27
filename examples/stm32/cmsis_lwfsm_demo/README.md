@@ -45,8 +45,8 @@ set(CMAKE_CXX_COMPILER_FORCED 1)
 ```
 - install the required pack(s): 
 ```
-cpackget add https://keil.com/pack/ARM.CMSIS.5.9.0.pack
-cpackget add https://keil.com/pack/Keil.STM32U5xx_DFP.2.1.0.pack
+cpackget add ARM.CMSIS
+cpackget add Keil.STM32U5xx_DFP
 cpackget add ../../../lwfsm/cmsis-pack/pack/fred-r-perso.lwfsm.0.1.0.pack
 ```
 - install the VSCode extension if you want an IDE: 
