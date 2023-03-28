@@ -117,6 +117,12 @@ cpackget add ../../../lwfsm/cmsis-pack/pack/fred-r-perso.lwfsm.0.1.0.pack
 
 ### Run the use-case from VSCode
 
+Update the location of the tools in `.vscode/lwfsm.code-workspace`:
+```
+		"cmsis-csolution.cbuildPath": "/home/fredr2010/.config/Code/User/globalStorage/ms-vscode.vscode-embedded-tools/vcpkg/root/downloads/artifacts/vcpkg-artifacts-cmsis/tools.open.cmsis.pack.ctools/1.5.0/bin/cbuild",
+		"cmsis-csolution.csolutionPath": "/home/fredr2010/.config/Code/User/globalStorage/ms-vscode.vscode-embedded-tools/vcpkg/root/downloads/artifacts/vcpkg-artifacts-cmsis/tools.open.cmsis.pack.ctools/1.5.0/bin/csolution",
+```
+
 > TODO
 
 ## Facing issues ?

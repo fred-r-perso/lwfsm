@@ -1,5 +1,8 @@
 {
     "recommendations": [
-        "arm.keil-studio-pack"
+        "arm.keil-studio-pack",
+        "arm.cmsis-csolution",
+        "arm.device-manager",
+        "arm.embedded-debug"
     ]
 }

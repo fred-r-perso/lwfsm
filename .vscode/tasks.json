@@ -10,6 +10,19 @@
 				"kind": "build",
 				"isDefault": true
 			}
+		},
+		{
+			"type": "embedded-debug.flash",
+			"serialNumber": "${command:device-manager.getSerialNumber}",
+			"program": "${command:cmsis-csolution.getBinaryFile}",
+			"cmsisPack": "Keil::STM32U5xx_DFP",
+			"problemMatcher": [],
+			"verifyFlash": false,
+			"label": "embedded-debug.flash: Flash Device",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
 		}
 	]
 }

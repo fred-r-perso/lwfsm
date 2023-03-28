@@ -6,7 +6,10 @@
 	],
 	"settings": {
 		"files.associations": {
-			"*.fsm": "c"			
-		}
+			"*.fsm": "c"
+		},
+		"cmsis-csolution.cbuildPath": "/home/fredr2010/.config/Code/User/globalStorage/ms-vscode.vscode-embedded-tools/vcpkg/root/downloads/artifacts/vcpkg-artifacts-cmsis/tools.open.cmsis.pack.ctools/1.5.0/bin/cbuild",
+		"cmsis-csolution.csolutionPath": "/home/fredr2010/.config/Code/User/globalStorage/ms-vscode.vscode-embedded-tools/vcpkg/root/downloads/artifacts/vcpkg-artifacts-cmsis/tools.open.cmsis.pack.ctools/1.5.0/bin/csolution",
+		"terminal.integrated.defaultProfile.linux": "bash"
 	}
 }
