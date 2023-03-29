@@ -123,7 +123,24 @@ Update the location of the tools in `.vscode/lwfsm.code-workspace`:
 		"cmsis-csolution.csolutionPath": "/home/fredr2010/.config/Code/User/globalStorage/ms-vscode.vscode-embedded-tools/vcpkg/root/downloads/artifacts/vcpkg-artifacts-cmsis/tools.open.cmsis.pack.ctools/1.5.0/bin/csolution",
 ```
 
-> TODO
+Then you need to generate the cprj files:
+```
+fredr2010@penguin:~/gh/lwfsm/examples/stm32/cmsis_lwfsm_demo$ ./scripts/set_vars.sh
+/home/fredr2010/.arm/Packs is available for the child process
+fredr2010@penguin:~/gh/lwfsm/examples/stm32/cmsis_lwfsm_demo$ csolution convert -s lwfsm_demo.csolution.yml
+/home/fredr2010/gh/lwfsm/examples/stm32/cmsis_lwfsm_demo/sw_project/lwfsm_demo.debug+B-U585I-IOT02A.cprj - info csolution: file generated successfully
+/home/fredr2010/gh/lwfsm/examples/stm32/cmsis_lwfsm_demo/sw_project/lwfsm_demo.release+B-U585I-IOT02A.cprj - info csolution: file generated successfully
+/home/fredr2010/gh/lwfsm/examples/stm32/cmsis_lwfsm_demo/sw_project/lwfsm_demo.debug+B-U585I-IOT02A.cbuild.yml - info csolution: file generated successfully
+/home/fredr2010/gh/lwfsm/examples/stm32/cmsis_lwfsm_demo/sw_project/lwfsm_demo.release+B-U585I-IOT02A.cbuild.yml - info csolution: file generated successfully
+/home/fredr2010/gh/lwfsm/examples/stm32/cmsis_lwfsm_demo/lwfsm_demo.cbuild-idx.yml - info csolution: file generated successfully
+```
+
+Then open the CMSIS panel:
+- The Active Solution is: `lwfsm_demo`
+- The Target Type is: `B-U585I-IOT02A`
+- The Build Type is: `debug`
+- The Project is: `lwfsm_demo`
+and click on "Build".
 
 ## Facing issues ?
 
