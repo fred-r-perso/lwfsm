@@ -59,10 +59,10 @@ cpackget add ../../../lwfsm/cmsis-pack/pack/fred-r-perso.lwfsm.0.1.0.pack
   - VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=Arm.keil-studio-pack
 - or install the [CMSIS-Toolbox](https://github.com/Open-CMSIS-Pack/cmsis-toolbox) if you want a CLI
 
-__Or option #2:__
+__Or option #2 (fails on Ubuntu 22.04):__
 - install vcpkg as explained [here](https://www.followchain.org/install-vcpkg-on-ubuntu/)
 - I also had to copy/paste the archive in ```~/.config/Code/User/globalStorage/ms-vscode.vscode-embedded-tools/vcpkg/root$``` and extract it.
-- install libnvurses5
+- install libncurses5
 ```
 sudo apt-get install libncurses5
 ```
@@ -72,18 +72,34 @@ $ sudo vcpkg activate
 ```
 - it fails but you can install gcc for ARM by yourself
 
-__Or option #3:__
+__Or option #3 (works on Ubuntu 22.04):__
+- you need CMAKE and GCC for ARM:
+```
+$ sudo apt-get update -y
+$ sudo apt-get install -y cmake
+$ sudo apt-get install -y gcc-arm-none-eabi
+```
+- install ninja too as explained [here](https://lindevs.com/install-ninja-build-system-on-ubuntu)
+
+
 Follow [these](https://github.com/Open-CMSIS-Pack/cmsis-toolbox/blob/main/docs/installation.md) instructions:
 - download CMSIS-Toolbox from ```https://github.com/Open-CMSIS-Pack/cmsis-toolbox/releases```
 - install:
 ```
-$ sudo mkdir /opt/cmsis-toolbox16
-$ sudo tar xf cmsis-toolbox-linux-amd64.tar.gz --strip-components=1 -C /opt/cmsis-toolbox16/
+$ sudo mkdir /opt/cmsis-toolbox15
+$ sudo tar xf cmsis-toolbox-linux-amd64.tar.gz --strip-components=1 -C /opt/cmsis-toolbox15/
 ```
 - try:
 ```
-$ /opt/cmsis-toolbox16/bin/cpackget --version
+$ /opt/cmsis-toolbox15/bin/cpackget --version
 cpackget version 0.9.2 (C) 2022-2023 Linaro
+```
+- update ```/opt/cmsis-toolbox15/etc/GCC.10.3.1.cmake``` as in option 1:
+```
+set(TOOLCHAIN_ROOT "/usr/bin/")
+# Prevent CMake from testing the toolchain
+set(CMAKE_C_COMPILER_FORCED   1)
+set(CMAKE_CXX_COMPILER_FORCED 1)
 ```
 
 __Or option #4 (works on Ubuntu 22.04):__
@@ -93,6 +109,7 @@ $ sudo apt-get update -y
 $ sudo apt-get install -y cmake
 $ sudo apt-get install -y gcc-arm-none-eabi
 ```
+- install ninja too as explained [here](https://lindevs.com/install-ninja-build-system-on-ubuntu)
 - download ```cmsis-toolbox.sh```
 - install it:
 ```

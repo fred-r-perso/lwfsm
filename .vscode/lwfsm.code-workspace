@@ -8,9 +8,9 @@
 		"files.associations": {
 			"*.fsm": "c"
 		},
-		"cmsis-csolution.cbuildPath": "/home/fredr2010/.config/Code/User/globalStorage/ms-vscode.vscode-embedded-tools/vcpkg/root/downloads/artifacts/vcpkg-artifacts-cmsis/tools.open.cmsis.pack.ctools/1.5.0/bin/cbuild",
-		"cmsis-csolution.csolutionPath": "/home/fredr2010/.config/Code/User/globalStorage/ms-vscode.vscode-embedded-tools/vcpkg/root/downloads/artifacts/vcpkg-artifacts-cmsis/tools.open.cmsis.pack.ctools/1.5.0/bin/csolution",
+		"cmsis-csolution.cbuildPath": "/opt/cmsis-toolbox15/bin/cbuild",
+		"cmsis-csolution.csolutionPath": "/opt/cmsis-toolbox15/bin/csolution",
 		"terminal.integrated.defaultProfile.linux": "bash",
-		"cmsis-csolution.packCachePath": "/home/fredr2010/.arm/Packs"
+		"cmsis-csolution.packCachePath": "/home/fred-r/.arm/Packs"
 	}
 }
