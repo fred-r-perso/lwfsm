@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_3c7560893a0e76c6b37768dc38207909" kind="dir">
+    <compoundname>/__w/lwfsm/lwfsm/lwfsm</compoundname>
+    <innerdir refid="dir_1c14f5b7ea29e800271b9d10d539c621">/__w/lwfsm/lwfsm/lwfsm/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/__w/lwfsm/lwfsm/lwfsm/"/>
+  </compounddef>
+</doxygen>

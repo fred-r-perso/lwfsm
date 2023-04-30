@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="group__LwFSM__API" kind="group">
+    <compoundname>LwFSM_API</compoundname>
+    <title>LwFSM FSM engine API</title>
+    <innergroup refid="group__LwFSM__API__M1">FSM engine Model 1</innergroup>
+    <innergroup refid="group__LwFSM__API__M2">FSM engine Model 2</innergroup>
+    <briefdescription>
+<para>Functions to initialize and run a state machine. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

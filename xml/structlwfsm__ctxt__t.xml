@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structlwfsm__ctxt__t" kind="struct" language="C++" prot="public">
+    <compoundname>lwfsm_ctxt_t</compoundname>
+    <includes refid="lwfsm_8h" local="no">lwfsm.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlwfsm__ctxt__t_1ab8c24172e983044f0972da709ac8fec4" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structlwfsm__table__row__t" kindref="compound">lwfsm_table_row_t</ref> *</type>
+        <definition>const lwfsm_table_row_t* fsm_table</definition>
+        <argsstring></argsstring>
+        <name>fsm_table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FSM table to be run </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm.h" line="91" column="1" bodyfile="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlwfsm__ctxt__t_1a56b2fcc9bfe0cf695a6742f0bb42ce55" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cur_state</definition>
+        <argsstring></argsstring>
+        <name>cur_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>current FSM state </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm.h" line="92" column="1" bodyfile="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlwfsm__ctxt__t_1a61d5b6d225fd8e454dd1e9bb3a1d6fe2" prot="public" static="no" mutable="no">
+        <type>const char **</type>
+        <definition>const char* * log_names</definition>
+        <argsstring></argsstring>
+        <name>log_names</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>array of log names for the FSM states </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm.h" line="94" column="1" bodyfile="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure of the internal context of an FSM. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>lwfsm_ctxt_t</label>
+        <link refid="structlwfsm__ctxt__t"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>fsm_table</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>lwfsm_table_row_t</label>
+        <link refid="structlwfsm__table__row__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm.h" line="90" column="1" bodyfile="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm.h" bodystart="90" bodyend="96"/>
+    <listofallmembers>
+      <member refid="structlwfsm__ctxt__t_1a56b2fcc9bfe0cf695a6742f0bb42ce55" prot="public" virt="non-virtual"><scope>lwfsm_ctxt_t</scope><name>cur_state</name></member>
+      <member refid="structlwfsm__ctxt__t_1ab8c24172e983044f0972da709ac8fec4" prot="public" virt="non-virtual"><scope>lwfsm_ctxt_t</scope><name>fsm_table</name></member>
+      <member refid="structlwfsm__ctxt__t_1a61d5b6d225fd8e454dd1e9bb3a1d6fe2" prot="public" virt="non-virtual"><scope>lwfsm_ctxt_t</scope><name>log_names</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

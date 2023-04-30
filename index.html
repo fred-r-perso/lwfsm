@@ -1,0 +1,565 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Welcome to LwFSM’s documentation! &mdash; LwFSM 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> LwFSM
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to LwFSM’s documentation!</a><ul>
+<li><a class="reference internal" href="#what-is-lwfsm">What is LwFSM ?</a></li>
+<li><a class="reference internal" href="#how-to-use-lwfsm">How to use LwFSM ?</a></li>
+<li><a class="reference internal" href="#folders-structure">Folders structure</a></li>
+<li><a class="reference internal" href="#design-principles">Design principles</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lwfsm-user-api">LwFSM User API</a></li>
+<li><a class="reference internal" href="#fsm-declaration">FSM declaration</a></li>
+<li><a class="reference internal" href="#lwfsm-types">LwFSM types</a></li>
+<li><a class="reference internal" href="#lwfsm-configuration">LwFSM configuration</a></li>
+<li><a class="reference internal" href="#lwfsm-logging-service">LwFSM logging service</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">LwFSM</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Welcome to LwFSM’s documentation!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="welcome-to-lwfsm-s-documentation">
+<h1>Welcome to LwFSM’s documentation!<a class="headerlink" href="#welcome-to-lwfsm-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-lwfsm">
+<h2>What is LwFSM ?<a class="headerlink" href="#what-is-lwfsm" title="Permalink to this headline">¶</a></h2>
+<p>LwFSM is a Finite State Machine (FSM) engine and its objective is to:
+* be lightweight,
+* be suitable for embedded systems,
+* offer an abstract syntax in the FSM declaration.</p>
+<p><strong>NOTE:</strong> This code follows the principles of the lw modules from <a class="reference external" href="https://github.com/MaJerle">https://github.com/MaJerle</a></p>
+<p><strong>NOTE:</strong>  This code is provided by the author in his own name.</p>
+</div>
+<div class="section" id="how-to-use-lwfsm">
+<h2>How to use LwFSM ?<a class="headerlink" href="#how-to-use-lwfsm" title="Permalink to this headline">¶</a></h2>
+<p>LwFSM offers:
+* a set of macros to define the FSM
+* 2 functions to initialize and run the state machine</p>
+<p>The end-user can:
+* start from the templates available in the <cite>lwfsm/src</cite> folder
+* implement one C function per FSM state and associate it to its state with the macros
+* initialize and run the FSM engine from his applicative code</p>
+</div>
+<div class="section" id="folders-structure">
+<h2>Folders structure<a class="headerlink" href="#folders-structure" title="Permalink to this headline">¶</a></h2>
+<p>The code is available in the <cite>lwfsm/</cite> folder.</p>
+<p>Examples are available in the <cite>examples/</cite> folder.</p>
+<p>A more complete documentation is available in the <cite>doc/</cite> folder.</p>
+</div>
+<div class="section" id="design-principles">
+<h2>Design principles<a class="headerlink" href="#design-principles" title="Permalink to this headline">¶</a></h2>
+<p>LwFSM is written in ISO C (C11).</p>
+<p>The LwFSM engine can run several state machines concurrently:
+* it uses a context describing an FSM,
+* it does not use any global or module variable.</p>
+<p>LwFSM is configurable via a set of defines gathered in some option files.</p>
+<p>LwFSM does not have any hardware-adherence.
+It only needs a C library and a printf-like service (see <cite>lwfsm_log.h</cite>).</p>
+<p>Two programming models are proposed:
+#. a first model targeting simplicity and more compact code: see <cite>lwfsm_app_model1_template.c</cite>,
+#. a latter model targeting an improved maintainability, but requiring some more complex definitions: see <cite>lwfsm_app_model2_template.c</cite>.</p>
+<p>The two models can be used in the same project, they are not exclusive.</p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+<div class="section" id="lwfsm-user-api">
+<h1>LwFSM User API<a class="headerlink" href="#lwfsm-user-api" title="Permalink to this headline">¶</a></h1>
+<dl class="group">
+<dt>
+<span class="target" id="group__LwFSM__API__M1"></span><em>group</em> <code class="descname">LwFSM_API_M1</code></dt>
+<dd><p>Functions to initialize and run a state machine. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv424lwfsm_init_state_machineP12lwfsm_ctxt_tPK17lwfsm_table_row_tPPKcK8uint32_t">
+<span id="_CPPv324lwfsm_init_state_machineP12lwfsm_ctxt_tPK17lwfsm_table_row_tPPKcK8uint32_t"></span><span id="_CPPv224lwfsm_init_state_machineP12lwfsm_ctxt_tPK17lwfsm_table_row_tPPKcK8uint32_t"></span><span id="lwfsm_init_state_machine__lwfsm_ctxt_tP.lwfsm_table_row_tCP.cCPP.uint32_tC"></span><span class="target" id="group__LwFSM__API__M1_1ga5d031ea56c1b3524b1ff6978f636fb5b"></span>lwfsm_status_t <code class="descname">lwfsm_init_state_machine</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412lwfsm_ctxt_t" title="lwfsm_ctxt_t">lwfsm_ctxt_t</a> *<em>fsm_ctxt</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv417lwfsm_table_row_t" title="lwfsm_table_row_t">lwfsm_table_row_t</a> *<em>fsm_table</em>, <em class="property">const</em> char **<em>states_log_names</em>, <em class="property">const</em> uint32_t <em>initial_state</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424lwfsm_init_state_machineP12lwfsm_ctxt_tPK17lwfsm_table_row_tPPKcK8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>FSM engine initialization. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>see <a class="reference internal" href="#group__LwFSM__Types_1gac5dfb37d24f02ace29c00c45af5553ec"><span class="std std-ref">lwfsm_status_t</span></a> </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">fsm_ctxt</span></code>: definition of the FSM to run, allocated by the caller (see <a class="reference internal" href="#structlwfsm__ctxt__t"><span class="std std-ref">lwfsm_ctxt_t</span></a>) </li>
+<li><code class="docutils literal notranslate"><span class="pre">fsm_table</span></code>: the table of C functions implementing the FSM states logic </li>
+<li><code class="docutils literal notranslate"><span class="pre">states_log_names</span></code>: FSM states names to be printed in the logs if LWFSM_USE_LOG is enabled </li>
+<li><code class="docutils literal notranslate"><span class="pre">initial_state</span></code>: initial state of this FSM </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv423lwfsm_run_state_machineP12lwfsm_ctxt_tPv">
+<span id="_CPPv323lwfsm_run_state_machineP12lwfsm_ctxt_tPv"></span><span id="_CPPv223lwfsm_run_state_machineP12lwfsm_ctxt_tPv"></span><span id="lwfsm_run_state_machine__lwfsm_ctxt_tP.voidP"></span><span class="target" id="group__LwFSM__API__M1_1gad54a06d0aa371d4a631a1fe056f8bd0e"></span>lwfsm_status_t <code class="descname">lwfsm_run_state_machine</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412lwfsm_ctxt_t" title="lwfsm_ctxt_t">lwfsm_ctxt_t</a> *<em>fsm_ctxt</em>, void *<em>user_ctxt</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423lwfsm_run_state_machineP12lwfsm_ctxt_tPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>FSM engine loop. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>see <a class="reference internal" href="#group__LwFSM__Types_1gac5dfb37d24f02ace29c00c45af5553ec"><span class="std std-ref">lwfsm_status_t</span></a> </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">fsm_ctxt</span></code>: definition of the FSM to run (see <a class="reference internal" href="#structlwfsm__ctxt__t"><span class="std std-ref">lwfsm_ctxt_t</span></a>) </li>
+<li><code class="docutils literal notranslate"><span class="pre">user_ctxt</span></code>: an opaque user context to be used in the FSM state functions </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="group">
+<dt>
+<span class="target" id="group__LwFSM__API__M2"></span><em>group</em> <code class="descname">LwFSM_API_M2</code></dt>
+<dd><p>Functions to initialize and run a state machine. </p>
+<p>Programming Model 2 </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv426lwfsm_init_state_machineM2P13lwfsm_ctxt2_tPK17lwfsm_table_row_tPPKcK8uint32_tK8uint32_t">
+<span id="_CPPv326lwfsm_init_state_machineM2P13lwfsm_ctxt2_tPK17lwfsm_table_row_tPPKcK8uint32_tK8uint32_t"></span><span id="_CPPv226lwfsm_init_state_machineM2P13lwfsm_ctxt2_tPK17lwfsm_table_row_tPPKcK8uint32_tK8uint32_t"></span><span id="lwfsm_init_state_machineM2__lwfsm_ctxt2_tP.lwfsm_table_row_tCP.cCPP.uint32_tC.uint32_tC"></span><span class="target" id="group__LwFSM__API__M2_1gaa16284f1422ff96d7bc550deb7ef97ce"></span>lwfsm_status_t <code class="descname">lwfsm_init_state_machineM2</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv413lwfsm_ctxt2_t" title="lwfsm_ctxt2_t">lwfsm_ctxt2_t</a> *<em>fsm_ctxt</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv417lwfsm_table_row_t" title="lwfsm_table_row_t">lwfsm_table_row_t</a> *<em>fsm_table</em>, <em class="property">const</em> char **<em>states_log_names</em>, <em class="property">const</em> uint32_t <em>initial_state</em>, <em class="property">const</em> uint32_t <em>nb_states</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426lwfsm_init_state_machineM2P13lwfsm_ctxt2_tPK17lwfsm_table_row_tPPKcK8uint32_tK8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>FSM engine initialization. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>see <a class="reference internal" href="#group__LwFSM__Types_1gac5dfb37d24f02ace29c00c45af5553ec"><span class="std std-ref">lwfsm_status_t</span></a> </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">fsm_ctxt</span></code>: definition of the FSM to run, allocated by the caller (see <a class="reference internal" href="#structlwfsm__ctxt__t"><span class="std std-ref">lwfsm_ctxt_t</span></a>) </li>
+<li><code class="docutils literal notranslate"><span class="pre">fsm_table</span></code>: the table of C functions implementing the FSM states logic </li>
+<li><code class="docutils literal notranslate"><span class="pre">states_log_names</span></code>: FSM states names to be printed in the logs if LWFSM_USE_LOG is enabled </li>
+<li><code class="docutils literal notranslate"><span class="pre">initial_state</span></code>: initial state of this FSM </li>
+<li><code class="docutils literal notranslate"><span class="pre">nb_states</span></code>: number of FSM states in the state machine </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv425lwfsm_run_state_machineM2P13lwfsm_ctxt2_tPv">
+<span id="_CPPv325lwfsm_run_state_machineM2P13lwfsm_ctxt2_tPv"></span><span id="_CPPv225lwfsm_run_state_machineM2P13lwfsm_ctxt2_tPv"></span><span id="lwfsm_run_state_machineM2__lwfsm_ctxt2_tP.voidP"></span><span class="target" id="group__LwFSM__API__M2_1ga711182eae8128494523ed4865433e2d9"></span>lwfsm_status_t <code class="descname">lwfsm_run_state_machineM2</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv413lwfsm_ctxt2_t" title="lwfsm_ctxt2_t">lwfsm_ctxt2_t</a> *<em>fsm_ctxt</em>, void *<em>user_ctxt</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425lwfsm_run_state_machineM2P13lwfsm_ctxt2_tPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>FSM engine loop. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>see <a class="reference internal" href="#group__LwFSM__Types_1gac5dfb37d24f02ace29c00c45af5553ec"><span class="std std-ref">lwfsm_status_t</span></a> </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">fsm_ctxt</span></code>: definition of the FSM to run (see <a class="reference internal" href="#structlwfsm__ctxt__t"><span class="std std-ref">lwfsm_ctxt_t</span></a>) </li>
+<li><code class="docutils literal notranslate"><span class="pre">user_ctxt</span></code>: an opaque user context to be used in the FSM state functions </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="fsm-declaration">
+<h1>FSM declaration<a class="headerlink" href="#fsm-declaration" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><dl class="group">
+<dt>
+<span class="target" id="group__LwFSM__Macros"></span><em>group</em> <code class="descname">LwFSM_Macros</code></dt>
+<dd><p>Macros used to describe the Finite State Machine. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Defines</p>
+<dl class="macro">
+<dt id="c.LWFSM_STOP_SUCCESS">
+<span class="target" id="group__LwFSM__Macros_1ga715a6eaac42f18c17cdb876aa6ba603b"></span><code class="descname">LWFSM_STOP_SUCCESS</code><a class="headerlink" href="#c.LWFSM_STOP_SUCCESS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fake FSM state indicating to stop running the FSM (normal stop) </p>
+<p>We want to stop the FSM processing as we reached its expected termination point. </p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.LWFSM_STOP_ERROR">
+<span class="target" id="group__LwFSM__Macros_1ga161fd13c3f0fc1d82a3bc22a58fa633e"></span><code class="descname">LWFSM_STOP_ERROR</code><a class="headerlink" href="#c.LWFSM_STOP_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fake FSM state indicating to stop running the FSM (error encountered) </p>
+<p>We want to stop the FSM processing as an unexpected error occurred. </p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.LWFSM_STATES_START">
+<span class="target" id="group__LwFSM__Macros_1gac21ce3d980668fa04aa139d8668562c7"></span><code class="descname">LWFSM_STATES_START</code><span class="sig-paren">(</span>states_list<span class="sig-paren">)</span><a class="headerlink" href="#c.LWFSM_STATES_START" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts a new list of FSM states description. </p>
+<p>It starts the description of the list of states. </p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.LWFSM_STATES_DECL">
+<span class="target" id="group__LwFSM__Macros_1ga7ca4246c6f9ad044558e01e86bf50780"></span><code class="descname">LWFSM_STATES_DECL</code><span class="sig-paren">(</span>fsm_state<span class="sig-paren">)</span><a class="headerlink" href="#c.LWFSM_STATES_DECL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares a new FSM state - Model #1. </p>
+<p>It adds a new state in the list of states. /!\ The initial state must be the first one in this list. /!\</p>
+<p>See: lwfsm_app_model1_template.c </p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.LWFSM_STATES_FULL_DECL">
+<span class="target" id="group__LwFSM__Macros_1ga99ead8ed2ab2224e3b413649e8b8a0b0"></span><code class="descname">LWFSM_STATES_FULL_DECL</code><span class="sig-paren">(</span>fsm_state, fsm_state_name, fsm_state_function<span class="sig-paren">)</span><a class="headerlink" href="#c.LWFSM_STATES_FULL_DECL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares a new FSM state - Model #2. </p>
+<p>It adds a new state in the FSM. This macro must be redefined in the code depending on what is being defined: list of states, list of state names, fsm table.</p>
+<p>See: lwfsm_app_model2_template.c </p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.LWFSM_STATES_END">
+<span class="target" id="group__LwFSM__Macros_1ga6e8e57867e6a527dda0ecd6357591a23"></span><code class="descname">LWFSM_STATES_END</code><span class="sig-paren">(</span>states_list<span class="sig-paren">)</span><a class="headerlink" href="#c.LWFSM_STATES_END" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ends a new list of FSM states description. </p>
+<p>It closes the description of the list of states. </p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.LWFSM_TABLE_START">
+<span class="target" id="group__LwFSM__Macros_1ga6fd32c62089945bf5c7ebdcab41de5b7"></span><code class="descname">LWFSM_TABLE_START</code><span class="sig-paren">(</span>table_name<span class="sig-paren">)</span><a class="headerlink" href="#c.LWFSM_TABLE_START" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts a new FSM table description. </p>
+<p>It starts the description of a Finite State Machine. </p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.LWFSM_TABLE_ENTRY">
+<span class="target" id="group__LwFSM__Macros_1gad87a9e1cce6fc08e89933265e55b6ac7"></span><code class="descname">LWFSM_TABLE_ENTRY</code><span class="sig-paren">(</span>state_function<span class="sig-paren">)</span><a class="headerlink" href="#c.LWFSM_TABLE_ENTRY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares a new FSM state function - Model #1. </p>
+<p>It declares a FSM state function in the FSM table. /!\ The state functions must be added in the same order as the states declaration. /!\ </p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.LWFSM_TABLE_END">
+<span class="target" id="group__LwFSM__Macros_1ga428f76188b9d9fb7891f2e01b5d5703c"></span><code class="descname">LWFSM_TABLE_END</code><span class="sig-paren">(</span>table_name<span class="sig-paren">)</span><a class="headerlink" href="#c.LWFSM_TABLE_END" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes a FSM table description. </p>
+<p>It ends the description of a Finite State Machine. </p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.LWFSM_LOGS_NAME_START">
+<span class="target" id="group__LwFSM__Macros_1ga5fdaff8a2635b38f9115e138087e1d28"></span><code class="descname">LWFSM_LOGS_NAME_START</code><span class="sig-paren">(</span>states_log_names<span class="sig-paren">)</span><a class="headerlink" href="#c.LWFSM_LOGS_NAME_START" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts a new list of FSM states log names description. </p>
+<p>It starts the description of the list of log strings to be used for the FSM states. </p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.LWFSM_LOG_NAME_DECL">
+<span class="target" id="group__LwFSM__Macros_1gacf7268f80d00bd916e65322d97c90b7b"></span><code class="descname">LWFSM_LOG_NAME_DECL</code><span class="sig-paren">(</span>fsm_state_name<span class="sig-paren">)</span><a class="headerlink" href="#c.LWFSM_LOG_NAME_DECL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares a new FSM state log name - Model #1. </p>
+<p>It adds a new state in the list of states log names. /!\ The state log name must be added in the same order as the states declaration. /!\ </p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.LWFSM_LOGS_NAME_END">
+<span class="target" id="group__LwFSM__Macros_1ga14f596f7e0685f15a93bc45c99655bf5"></span><code class="descname">LWFSM_LOGS_NAME_END</code><span class="sig-paren">(</span>states_log_names<span class="sig-paren">)</span><a class="headerlink" href="#c.LWFSM_LOGS_NAME_END" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ends a new list of FSM states log names description. </p>
+<p>It closes the description of log strings to be used for the FSM states. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="lwfsm-types">
+<h1>LwFSM types<a class="headerlink" href="#lwfsm-types" title="Permalink to this headline">¶</a></h1>
+<dl class="group">
+<dt>
+<span class="target" id="group__LwFSM__Types"></span><em>group</em> <code class="descname">LwFSM_Types</code></dt>
+<dd><p>Types used to describe the Finite State Machine. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="type">
+<dt id="_CPPv418lwfsm_state_func_t">
+<span id="_CPPv318lwfsm_state_func_t"></span><span id="_CPPv218lwfsm_state_func_t"></span><span id="lwfsm_state_func_t"></span><span class="target" id="group__LwFSM__Types_1ga1f824da4c340448f2fab98a2a3d7111a"></span><em class="property">typedef </em>uint32_t (*<code class="descname">lwfsm_state_func_t</code>)<span class="sig-paren">(</span>void *opaque_ctxt<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418lwfsm_state_func_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>C function implementing a FSM state. </p>
+<p><p>Function implementing the logic a FSM state must run. </p>
+<dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the next FSM state</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">opaque_ctxt</span></code>: an opaque context for the state (if LWFSM_USE_CONTEXT is enabled) </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Enums</p>
+<dl class="type">
+<dt id="_CPPv4N11LwFSM_Types14lwfsm_status_tE">
+<span id="_CPPv3N11LwFSM_Types14lwfsm_status_tE"></span><span id="_CPPv2N11LwFSM_Types14lwfsm_status_tE"></span><span id="LwFSM_Types::lwfsm_status_t"></span><span class="target" id="group__LwFSM__Types_1gac5dfb37d24f02ace29c00c45af5553ec"></span><em class="property">enum </em><code class="descname">lwfsm_status_t</code><a class="headerlink" href="#_CPPv4N11LwFSM_Types14lwfsm_status_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return value of the FSM run function. </p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv4N11LwFSM_Types8LWFSM_OKE">
+<span id="_CPPv3N11LwFSM_Types8LWFSM_OKE"></span><span id="_CPPv2N11LwFSM_Types8LWFSM_OKE"></span><span class="target" id="group__LwFSM__Types_1ggac5dfb37d24f02ace29c00c45af5553ecaad55026fd5428c45adb2b3072118c616"></span><code class="descname">LWFSM_OK</code> = 0<a class="headerlink" href="#_CPPv4N11LwFSM_Types8LWFSM_OKE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The FSM state machine call succeeded </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N11LwFSM_Types11LWFSM_ERRORE">
+<span id="_CPPv3N11LwFSM_Types11LWFSM_ERRORE"></span><span id="_CPPv2N11LwFSM_Types11LWFSM_ERRORE"></span><span class="target" id="group__LwFSM__Types_1ggac5dfb37d24f02ace29c00c45af5553ecabdafd9ba79b33c3afdd8a644efebe8a6"></span><code class="descname">LWFSM_ERROR</code><a class="headerlink" href="#_CPPv4N11LwFSM_Types11LWFSM_ERRORE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The FSM state machine call encountered an error </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<dl class="class">
+<dt id="_CPPv417lwfsm_table_row_t">
+<span id="_CPPv317lwfsm_table_row_t"></span><span id="_CPPv217lwfsm_table_row_t"></span><span id="lwfsm_table_row_t"></span><span class="target" id="structlwfsm__table__row__t"></span><em class="property">struct </em><code class="descname">lwfsm_table_row_t</code><a class="headerlink" href="#_CPPv417lwfsm_table_row_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;lwfsm.h&gt;</em><p>FSM table row. </p>
+<p>Structure describing one row in the FSM table </p>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv412lwfsm_ctxt_t">
+<span id="_CPPv312lwfsm_ctxt_t"></span><span id="_CPPv212lwfsm_ctxt_t"></span><span id="lwfsm_ctxt_t"></span><span class="target" id="structlwfsm__ctxt__t"></span><em class="property">struct </em><code class="descname">lwfsm_ctxt_t</code><a class="headerlink" href="#_CPPv412lwfsm_ctxt_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;lwfsm.h&gt;</em><p>Structure of the internal context of an FSM. </p>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv413lwfsm_ctxt2_t">
+<span id="_CPPv313lwfsm_ctxt2_t"></span><span id="_CPPv213lwfsm_ctxt2_t"></span><span id="lwfsm_ctxt2_t"></span><span class="target" id="structlwfsm__ctxt2__t"></span><em class="property">struct </em><code class="descname">lwfsm_ctxt2_t</code><a class="headerlink" href="#_CPPv413lwfsm_ctxt2_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;lwfsm.h&gt;</em><p>Structure of the internal context of an FSM Programming Model 2. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="lwfsm-configuration">
+<h1>LwFSM configuration<a class="headerlink" href="#lwfsm-configuration" title="Permalink to this headline">¶</a></h1>
+<dl class="group">
+<dt>
+<span class="target" id="group__LWFSM__OPT"></span><em>group</em> <code class="descname">LWFSM_OPT</code></dt>
+<dd><p>Default configuration setup. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Defines</p>
+<dl class="macro">
+<dt id="c.LWFSM_USE_LOG">
+<span class="target" id="group__LWFSM__OPT_1gaa7da043584ce3ffe631c9c03387f35ce"></span><code class="descname">LWFSM_USE_LOG</code><a class="headerlink" href="#c.LWFSM_USE_LOG" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables <code class="docutils literal notranslate"><span class="pre">1</span></code> or disables <code class="docutils literal notranslate"><span class="pre">0</span></code> the logs. </p>
+<p>It enables the logging mechanism (one log level only)use logs by default </p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.LWFSM_USE_CONTEXT">
+<span class="target" id="group__LWFSM__OPT_1ga43e377ecd0bdb57a584806926ca8eb2d"></span><code class="descname">LWFSM_USE_CONTEXT</code><a class="headerlink" href="#c.LWFSM_USE_CONTEXT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables <code class="docutils literal notranslate"><span class="pre">1</span></code> or disables <code class="docutils literal notranslate"><span class="pre">0</span></code> the FSM context. </p>
+<p>It enables the possibility to pass a context from one FSM state to anotheruse applicative context by default </p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.LWFSM_USE_PROGMOD2">
+<span class="target" id="group__LWFSM__OPT_1gad2e0a921e7439210d365c80d8e738f38"></span><code class="descname">LWFSM_USE_PROGMOD2</code><a class="headerlink" href="#c.LWFSM_USE_PROGMOD2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables <code class="docutils literal notranslate"><span class="pre">1</span></code> or disables <code class="docutils literal notranslate"><span class="pre">0</span></code> the Programming Model 2. </p>
+<p>It enables the possibility to have a single declaration of the FSM statesprogramming model 2 is available by default </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="lwfsm-logging-service">
+<h1>LwFSM logging service<a class="headerlink" href="#lwfsm-logging-service" title="Permalink to this headline">¶</a></h1>
+<dl class="group">
+<dt>
+<span class="target" id="group__LWFSM__LOG"></span><em>group</em> <code class="descname">LWFSM_LOG</code></dt>
+<dd><p>Default LOG service. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Defines</p>
+<dl class="macro">
+<dt id="c.LWFSM_LOG">
+<span class="target" id="group__LWFSM__LOG_1gabae58a6ef0111ffa5692f6a487f036f4"></span><code class="descname">LWFSM_LOG</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.LWFSM_LOG" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logging service. </p>
+<p>The default porting relies on the lib-C printf service. It is up to the project to port this service to the targeted hardware. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2023, Frédéric Ruellé
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

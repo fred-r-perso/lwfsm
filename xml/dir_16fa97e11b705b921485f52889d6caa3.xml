@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_16fa97e11b705b921485f52889d6caa3" kind="dir">
+    <compoundname>/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm</compoundname>
+    <innerfile refid="lwfsm_8h">lwfsm.h</innerfile>
+    <innerfile refid="lwfsm__log_8h">lwfsm_log.h</innerfile>
+    <innerfile refid="lwfsm__opt_8h">lwfsm_opt.h</innerfile>
+    <innerfile refid="lwfsm__opts__template_8h">lwfsm_opts_template.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/"/>
+  </compounddef>
+</doxygen>

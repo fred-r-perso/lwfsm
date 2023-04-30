@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="group__LwFSM__API__M2" kind="group">
+    <compoundname>LwFSM_API_M2</compoundname>
+    <title>FSM engine Model 2</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__LwFSM__API__M2_1gaa16284f1422ff96d7bc550deb7ef97ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__LwFSM__Types_1gac5dfb37d24f02ace29c00c45af5553ec" kindref="member">lwfsm_status_t</ref></type>
+        <definition>lwfsm_status_t lwfsm_init_state_machineM2</definition>
+        <argsstring>(lwfsm_ctxt2_t *fsm_ctxt, const lwfsm_table_row_t *fsm_table, const char **states_log_names, const uint32_t initial_state, const uint32_t nb_states)</argsstring>
+        <name>lwfsm_init_state_machineM2</name>
+        <param>
+          <type><ref refid="structlwfsm__ctxt2__t" kindref="compound">lwfsm_ctxt2_t</ref> *</type>
+          <declname>fsm_ctxt</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structlwfsm__table__row__t" kindref="compound">lwfsm_table_row_t</ref> *</type>
+          <declname>fsm_table</declname>
+        </param>
+        <param>
+          <type>const char **</type>
+          <declname>states_log_names</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>initial_state</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>nb_states</declname>
+        </param>
+        <briefdescription>
+<para>FSM engine initialization. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fsm_ctxt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>definition of the FSM to run, allocated by the caller (see <ref refid="structlwfsm__ctxt__t" kindref="compound">lwfsm_ctxt_t</ref>) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fsm_table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the table of C functions implementing the FSM states logic </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>states_log_names</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FSM states names to be printed in the logs if LWFSM_USE_LOG is enabled </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initial_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>initial state of this FSM </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nb_states</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of FSM states in the state machine </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>see <ref refid="group__LwFSM__Types_1gac5dfb37d24f02ace29c00c45af5553ec" kindref="member">lwfsm_status_t</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm.h" line="285" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LwFSM__API__M2_1ga711182eae8128494523ed4865433e2d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__LwFSM__Types_1gac5dfb37d24f02ace29c00c45af5553ec" kindref="member">lwfsm_status_t</ref></type>
+        <definition>lwfsm_status_t lwfsm_run_state_machineM2</definition>
+        <argsstring>(lwfsm_ctxt2_t *fsm_ctxt, void *user_ctxt)</argsstring>
+        <name>lwfsm_run_state_machineM2</name>
+        <param>
+          <type><ref refid="structlwfsm__ctxt2__t" kindref="compound">lwfsm_ctxt2_t</ref> *</type>
+          <declname>fsm_ctxt</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>user_ctxt</declname>
+        </param>
+        <briefdescription>
+<para>FSM engine loop. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fsm_ctxt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>definition of the FSM to run (see <ref refid="structlwfsm__ctxt__t" kindref="compound">lwfsm_ctxt_t</ref>) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user_ctxt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an opaque user context to be used in the FSM state functions </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>see <ref refid="group__LwFSM__Types_1gac5dfb37d24f02ace29c00c45af5553ec" kindref="member">lwfsm_status_t</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm.h" line="297" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Functions to initialize and run a state machine. </para>    </briefdescription>
+    <detaileddescription>
+<para>Programming Model 2 </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

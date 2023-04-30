@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structlwfsm__table__row__t" kind="struct" language="C++" prot="public">
+    <compoundname>lwfsm_table_row_t</compoundname>
+    <includes refid="lwfsm_8h" local="no">lwfsm.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlwfsm__table__row__t_1a0009298462d5a61e915ac3387d841a2a" prot="public" static="no" mutable="no">
+        <type><ref refid="group__LwFSM__Types_1ga1f824da4c340448f2fab98a2a3d7111a" kindref="member">lwfsm_state_func_t</ref></type>
+        <definition>lwfsm_state_func_t state_function</definition>
+        <argsstring></argsstring>
+        <name>state_function</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>C function implementing the logic of an FSM state </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm.h" line="72" column="1" bodyfile="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>FSM table row. </para>    </briefdescription>
+    <detaileddescription>
+<para>Structure describing one row in the FSM table </para>    </detaileddescription>
+    <location file="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm.h" line="71" column="1" bodyfile="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm.h" bodystart="71" bodyend="73"/>
+    <listofallmembers>
+      <member refid="structlwfsm__table__row__t_1a0009298462d5a61e915ac3387d841a2a" prot="public" virt="non-virtual"><scope>lwfsm_table_row_t</scope><name>state_function</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

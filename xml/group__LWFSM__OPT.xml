@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="group__LWFSM__OPT" kind="group">
+    <compoundname>LWFSM_OPT</compoundname>
+    <title>Configuration</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__LWFSM__OPT_1gaa7da043584ce3ffe631c9c03387f35ce" prot="public" static="no">
+        <name>LWFSM_USE_LOG</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>Enables <computeroutput>1</computeroutput> or disables <computeroutput>0</computeroutput> the logs. </para>        </briefdescription>
+        <detaileddescription>
+<para>It enables the logging mechanism (one log level only)use logs by default </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm_opt.h" line="61" column="9" bodyfile="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm_opt.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LWFSM__OPT_1ga43e377ecd0bdb57a584806926ca8eb2d" prot="public" static="no">
+        <name>LWFSM_USE_CONTEXT</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>Enables <computeroutput>1</computeroutput> or disables <computeroutput>0</computeroutput> the FSM context. </para>        </briefdescription>
+        <detaileddescription>
+<para>It enables the possibility to pass a context from one FSM state to anotheruse applicative context by default </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm_opt.h" line="70" column="9" bodyfile="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm_opt.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LWFSM__OPT_1gad2e0a921e7439210d365c80d8e738f38" prot="public" static="no">
+        <name>LWFSM_USE_PROGMOD2</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>Enables <computeroutput>1</computeroutput> or disables <computeroutput>0</computeroutput> the Programming Model 2. </para>        </briefdescription>
+        <detaileddescription>
+<para>It enables the possibility to have a single declaration of the FSM statesprogramming model 2 is available by default </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm_opt.h" line="79" column="9" bodyfile="/__w/lwfsm/lwfsm/lwfsm/src/include/lwfsm/lwfsm_opt.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Default configuration setup. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>
