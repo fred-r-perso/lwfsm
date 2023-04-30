@@ -30,6 +30,7 @@ This example project contains:
 
 ## Pre-requisites
 
+__Option #1 (works for a Linux container in ChromeOS):__
 - run `scripts/set_vars.sh`
 - tune the GCC configuration for CMake.
   In `/home/$USER/.config/Code/User/globalStorage/ms-vscode.vscode-embedded-tools/vcpkg/root/downloads/artifacts/vcpkg-artifacts-cmsis/tools.open.cmsis.pack.ctools/1.5.0/etc/GCC.10.3.1.cmake`  
@@ -57,6 +58,60 @@ cpackget add ../../../lwfsm/cmsis-pack/pack/fred-r-perso.lwfsm.0.1.0.pack
   - Publisher: Arm
   - VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=Arm.keil-studio-pack
 - or install the [CMSIS-Toolbox](https://github.com/Open-CMSIS-Pack/cmsis-toolbox) if you want a CLI
+
+__Or option #2:__
+- install vcpkg as explained [here](https://www.followchain.org/install-vcpkg-on-ubuntu/)
+- I also had to copy/paste the archive in ```~/.config/Code/User/globalStorage/ms-vscode.vscode-embedded-tools/vcpkg/root$``` and extract it.
+- install libnvurses5
+```
+sudo apt-get install libncurses5
+```
+- from lwfsm/examples/stm32/cmsis_lwfsm_demo:
+```
+$ sudo vcpkg activate
+```
+- it fails but you can install gcc for ARM by yourself
+
+__Or option #3:__
+Follow [these](https://github.com/Open-CMSIS-Pack/cmsis-toolbox/blob/main/docs/installation.md) instructions:
+- download CMSIS-Toolbox from ```https://github.com/Open-CMSIS-Pack/cmsis-toolbox/releases```
+- install:
+```
+$ sudo mkdir /opt/cmsis-toolbox
+$ sudo tar xf cmsis-toolbox-linux-arm64.tar.gz --strip-components=1 -C /opt/cmsis-toolbox/
+```
+- try:
+```
+$ /opt/cmsis-toolbox/bin/cpackget --version
+bash: /opt/cmsis-toolbox/bin/cpackget : impossible d'exécuter le fichier binaire : Erreur de format pour exec()
+```
+
+__Or option #4 (works on Ubuntu 22.04):__
+- you need CMAKE and GCC for ARM:
+```
+$ sudo apt-get update -y
+$ sudo apt-get install -y cmake
+$ sudo apt-get install -y gcc-arm-none-eabi
+```
+- download ```cmsis-toolbox.sh```
+- install it:
+```
+$ sudo mkdir /opt/cmsis-toolbox-sh
+$ sudo cp ~/Téléchargements/cmsis-toolbox.sh /opt/cmsis-toolbox-sh
+$ sudo chmod +x /opt/cmsis-toolbox-sh/cmsis-toolbox.sh
+$ cd /opt/cmsis-toolbox-sh/
+$ sudo ./cmsis-toolbox.sh
+```
+- source the environment before using it:
+```
+$ source /opt/cmsis-toolbox-sh/./etc/setup
+```
+- install the required pack(s): 
+```
+cpackget add ARM.CMSIS
+cpackget add Keil.STM32U5xx_DFP
+cpackget add ../../../lwfsm/cmsis-pack/pack/fred-r-perso.lwfsm.0.1.0.pack
+```
 
 ## How to use ?
 
