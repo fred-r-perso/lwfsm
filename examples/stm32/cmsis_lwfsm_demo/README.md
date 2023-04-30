@@ -77,13 +77,13 @@ Follow [these](https://github.com/Open-CMSIS-Pack/cmsis-toolbox/blob/main/docs/i
 - download CMSIS-Toolbox from ```https://github.com/Open-CMSIS-Pack/cmsis-toolbox/releases```
 - install:
 ```
-$ sudo mkdir /opt/cmsis-toolbox
-$ sudo tar xf cmsis-toolbox-linux-arm64.tar.gz --strip-components=1 -C /opt/cmsis-toolbox/
+$ sudo mkdir /opt/cmsis-toolbox16
+$ sudo tar xf cmsis-toolbox-linux-amd64.tar.gz --strip-components=1 -C /opt/cmsis-toolbox16/
 ```
 - try:
 ```
-$ /opt/cmsis-toolbox/bin/cpackget --version
-bash: /opt/cmsis-toolbox/bin/cpackget : impossible d'exécuter le fichier binaire : Erreur de format pour exec()
+$ /opt/cmsis-toolbox16/bin/cpackget --version
+cpackget version 0.9.2 (C) 2022-2023 Linaro
 ```
 
 __Or option #4 (works on Ubuntu 22.04):__
